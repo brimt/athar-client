@@ -1,94 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Profile</title>
-  <link rel="stylesheet" href="../../assets/css/profile.css">
-  <link rel="stylesheet" href="../../assets/css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="../../assets/css/profile.css">
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <span class="back-arrow">
-        <a href="../index.html">
-          <ion-icon name="arrow-back-outline"></ion-icon>
-        </a>
-      </span>
-      <h1 class="header-title">User Profile</h1>
-    </div>
-    
-    <div class="profile-section">
-      <div class="profile-icon">JD</div>
-      <div class="profile-details">
-        <div class="profile-name">John Doe</div>
-        <div class="profile-email">johndoe@example.com</div>
-      </div>
-    </div>
-    
-    <div class="info-section">
-      <h2 class="section-title">Profile Information</h2>
-      
-      <div class="info-row">
-        <div class="info-label">
-          <span class="emoji">📧</span>
-          <span>Email</span>
+    <div class="profile-container">
+        <div class="header">
+            <div class="avatar">
+                <div class="avatar-icon">
+                  <ion-icon name="person-outline"></ion-icon>
+                </div>
+            </div>
+            <h2 class="username">hmtariq el tarsh</h2>
+            <p class="email">example@gmail.com</p>
+            <button class="edit-profile">edit profile</button>
         </div>
-        <div class="info-value">johndoe@example.com</div>
-      </div>
-      
-      <div class="info-row">
-        <div class="info-label">
-          <span class="emoji">👤</span>
-          <span>Name</span>
+        
+        <div class="menu-section">
+            <div class="menu-item">
+                <span class="menu-item-icon">
+                  <ion-icon name="person-outline"></ion-icon>
+                </span>
+                <span class="menu-item-text">personal data</span>
+                <span class="arrow-icon">&#10095;</span>
+            </div>
+            
+            <div class="menu-item">
+                <span class="menu-item-icon">
+                  <ion-icon name="chatbox-outline"></ion-icon>
+                </span>
+                <span class="menu-item-text">reviews</span>
+                <span class="arrow-icon">&#10095;</span>
+            </div>
+            
+            <div class="menu-item">
+                <span class="menu-item-icon">&#9679;</span>
+                <span class="menu-item-text">points</span>
+                <span class="arrow-icon">&#10095;</span>
+            </div>
+            
+            <div class="menu-item">
+                <span class="menu-item-icon">
+                  <ion-icon name="location-outline"></ion-icon>
+                </span>
+                <span class="menu-item-text">address</span>
+                <span class="arrow-icon">&#10095;</span>
+            </div>
+            
+            <div class="menu-item">
+                <span class="menu-item-icon">
+                  <ion-icon name="heart-circle-outline"></ion-icon>
+                </span>
+                <span class="menu-item-text">favorites</span>
+                <span class="arrow-icon">&#10095;</span>
+            </div>
         </div>
-        <div class="info-value">John Doe</div>
-      </div>
-      
-      <div class="info-row">
-        <div class="info-label">
-          <span class="emoji">⭐</span>
-          <span>Points</span>
+        
+        <div class="settings-section">
+            <div class="settings-header">
+                <span class="settings-icon">&#9881;</span>
+                <span class="settings-title">settings</span>
+            </div>
+            
+
+            
+            <div class="settings-item language-selector">
+                <span class="settings-item-text">language</span>
+                <span class="selected-language">english (US) &#9662;</span>
+            </div>
+            
+            <div class="delete-account">
+                <span class="delete-icon"><ion-icon name="trash-outline"></ion-icon></span>
+                <span class="delete-text">delete account</span>
+                <span class="arrow-icon">&#10095;</span>
+            </div>
         </div>
-        <div class="info-value">750</div>
-      </div>
     </div>
     
-    <div class="buttons">
-      <div class="btn btn-logout" id="logout-btn">Log out</div>
-      <div class="btn btn-settings">Settings</div>
-    </div>
-    
-    <div class="contact-section">
-      <h2 class="section-title">Contact Us</h2>
-      
-      <div class="contact-row">
-        <div class="contact-icon">📞</div>
-        <div class="contact-label">Phone Number</div>
-        <div class="contact-value">+1 800-123-4567</div>
-      </div>
-      
-      <div class="contact-row">
-        <div class="contact-icon">📧</div>
-        <div class="contact-label">Email</div>
-        <div class="contact-value">info@example.com</div>
-      </div>
-      
-      <div class="contact-row">
-        <div class="contact-icon">💬</div>
-        <div class="contact-label">Contact Us</div>
-        <div class="contact-value">Available 24/7</div>
-      </div>
-    </div>
-  </div>
+    <nav class="navigation">
+      <ul>
+        <li>
+          <span class="icon">
+            <ion-icon name="home-outline"></ion-icon>
+          </span>
+          <span class="title">
+            <a href="/src/index.html">Home</a>
+          </span>
+        </li>
+        <li>
+          <span class="icon">
+            <ion-icon name="business-outline"></ion-icon>
+          </span>
+          <span class="title">
+            <a href="/src/businesses-list/index.html">businesses</a>
+          </span>
+        </li>
+        <li  class="active-link">
+          <span class="icon">
+            <ion-icon name="person-outline"></ion-icon>
+          </span>
+          <span class="title">
+            <a href="#">profile</a>
+          </span>
+        </li>
+      </ul>
+    </nav>
+
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
   <script
-  type="module"
-  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-></script>
-<script
-  nomodule
-  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-></script>
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
 </body>
 </html>
