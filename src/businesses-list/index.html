@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Businesses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/business-list.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <ion-icon name="search-outline" class="search-icon"></ion-icon>
+            <input type="text" class="search-input" placeholder="Find restaurants, cafes, etc...">
+        </div>
+        
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <div class="filter-tab active">All</div>
+            <div class="filter-tab">Egyptian</div>
+            <div class="filter-tab">Fast Food</div>
+            <div class="filter-tab">Coffee</div>
+            <div class="filter-tab">Italian</div>
+            <div class="filter-tab">Asian</div>
+        </div>
+        
+        <!-- Popular Section -->
+        <div class="section-header">
+            <div class="section-title">Popular Businesses</div>
+            <div class="section-action">See All</div>
+        </div>
+        
+        <div class="business-list">
+            <!-- Koshri Abo Tarek -->
+            <a href="../businesses/index.html" class="business-card">
+                <div class="business-logo logo-bg-1">KAT</div>
+                <div class="business-info">
+                    <div class="business-name">Koshri Abo Tarek</div>
+                    <div class="business-type">Egyptian • Koshri</div>
+                    <div class="business-rating">
+                        <span>★</span> 4.2 (324 reviews)
+                    </div>
+                    <div class="business-status status-open">Open 24/7</div>
+                </div>
+            </a>
+            
+            <!-- Cairo Coffee Co -->
+            <div class="business-card">
+                <a href="../businesses/index.html" class="business-card">
+                    <div class="business-logo logo-bg-2">CCC</div>
+                    <div class="business-info">
+                        <div class="business-name">Cairo Coffee Co</div>
+                        <div class="business-type">Cafe • Coffee</div>
+                        <div class="business-rating">
+                            <span>★</span> 4.5 (218 reviews)
+                        </div>
+                        <div class="business-status status-open">Open until 11PM</div>
+                    </div>
+
+                </a>
+            </div>
+            
+            <!-- El Dahan Grill -->
+            <div class="business-card">
+                <div class="business-logo logo-bg-3">EDG</div>
+                <div class="business-info">
+                    <div class="business-name">El Dahan Grill</div>
+                    <div class="business-type">Egyptian • Grilled Meat</div>
+                    <div class="business-rating">
+                        <span>★</span> 4.7 (421 reviews)
+                    </div>
+                    <div class="business-status status-open">Open until 12AM</div>
+                </div>
+            </div>
+            
+            <!-- Napoli Pizza -->
+            <div class="business-card">
+                <div class="business-logo logo-bg-4">NP</div>
+                <div class="business-info">
+                    <div class="business-name">Napoli Pizza</div>
+                    <div class="business-type">Italian • Pizza</div>
+                    <div class="business-rating">
+                        <span>★</span> 4.0 (187 reviews)
+                    </div>
+                    <div class="business-status status-closed">Opens at 11AM</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Nearby Section -->
+        <div class="section-header">
+            <div class="section-title">Nearby Places</div>
+            <div class="section-action">See All</div>
+        </div>
+        
+        <div class="business-list">
+            <!-- El Tabei -->
+            <div class="business-card">
+                <div class="business-logo logo-bg-3">ET</div>
+                <div class="business-info">
+                    <div class="business-name">El Tabei El Domyati</div>
+                    <div class="business-type">Egyptian • Seafood</div>
+                    <div class="business-rating">
+                        <span>★</span> 4.4 (256 reviews)
+                    </div>
+                    <div class="business-status status-open">Open until 10PM</div>
+                </div>
+            </div>
+            
+            <!-- Zooba -->
+            <div class="business-card">
+                <div class="business-logo logo-bg-1">ZB</div>
+                <div class="business-info">
+                    <div class="business-name">Zooba</div>
+                    <div class="business-type">Egyptian • Street Food</div>
+                    <div class="business-rating">
+                        <span>★</span> 4.3 (198 reviews)
+                    </div>
+                    <div class="business-status status-open">Open until 1AM</div>
+                </div>
+            </div>
+        </div>
+        <nav class="navigation">
+            <ul>
+              <li>
+                <span class="icon">
+                  <ion-icon name="home-outline"></ion-icon>
+                </span>
+                <span class="title">
+                  <a href="../index.html">Home</a>
+                </span>
+              </li>
+              <li class="active-link">
+                <span class="icon">
+                  <ion-icon name="business-outline"></ion-icon>
+                </span>
+                <span class="title">
+                  <a href="#">businesses</a>
+                </span>
+              </li>
+              <li>
+                <span class="icon">
+                  <ion-icon name="person-outline"></ion-icon>
+                </span>
+                <span class="title">
+                  <a href="/src/profile/index.html">profile</a>
+                </span>
+              </li>
+            </ul>
+          </nav>
+    </div>
+    <div class="toast-message" id="toast-message"></div>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../../assets/js/businesses-list.js"></script>
+</body>
+</html>

@@ -3,120 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Koshri Abo Tarek - Restaurant Details</title>
     <link rel="stylesheet" href="../../assets/css/businesses.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-    
         <!-- Header -->
         <div class="header">
-          <div class="back-arrow" id="back-btn">
+            <div class="back-arrow" id="back-btn">
                 <a href="../businesses-list/index.html">
                     <ion-icon name="arrow-back-outline"></ion-icon>
                 </a>
-          </div>
-    
-          <div class="heart-icon" id="heart-btn">♡</div>
+            </div>
+            <div class="heart-icon" id="heart-btn"></div>
+        </div>
+        
+        <!-- Logo Section -->
+        <div class="logo-container">
+            <div class="restaurant-logo">
+                <div class="logo-image">KAT</div>
+            </div>
+            <h1 class="logo-title">Koshri Abo Tarek</h1>
         </div>
         
         <!-- Tag and Business Info -->
         <div class="tag-container">
-          <div class="tag">koshri abo tarek</div>
+            <div class="tag">Koshri</div>
+            <div class="tag">Egyptian Cuisine</div>
+            <div class="tag">Popular</div>
         </div>
         
         <div class="business-info">
-          <div class="business-name">koshri abo tarek restaurant</div>
-          <div class="rating">
-            <span class="star-filled">★</span>
-            <span class="star-filled">★</span>
-            <span class="star-filled">★</span>
-            <span class="star-filled">★</span>
-            <span class="star-empty">★</span>
-          </div>
+            <div class="business-name">Koshri Abo Tarek Restaurant</div>
+            <div class="rating">
+                <span class="star-filled">★</span>
+                <span class="star-filled">★</span>
+                <span class="star-filled">★</span>
+                <span class="star-filled">★</span>
+                <span class="star-empty">★</span>
+            </div>
         </div>
         
-        <div class="open-status">open 24/7</div>
+        <div class="open-status"></div>
         
         <!-- Image Slider -->
         <div class="image-slider">
-          <div class="slider-wrapper" id="slider-wrapper">
-            <div class="slide">
-              <div class="image-placeholder">
-                <div class="triangle"></div>
-              </div>
+            <div class="slider-wrapper" id="slider-wrapper">
+                <div class="slide">
+                    <div class="image-placeholder">
+                        <div class="triangle"></div>
+                        <p>Signature Dish</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image-placeholder">
+                        <div class="square"></div>
+                        <p>Restaurant Front</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image-placeholder">
+                        <div class="circle">1st</div>
+                        <p>Award Winner</p>
+                    </div>
+                </div>
             </div>
-            <div class="slide">
-              <div class="image-placeholder">
-                <div class="square"></div>
-              </div>
+            <div class="slider-nav">
+                <div class="nav-arrow" id="prev-slide">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                </div>
+                <div class="nav-arrow" id="next-slide">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </div>
             </div>
-            <div class="slide">
-              <div class="image-placeholder">
-                <div class="circle">1st</div>
-              </div>
-            </div>
-          </div>
-          <div class="slider-nav">
-            <div class="nav-arrow" id="prev-slide">
-                <ion-icon name="chevron-back-outline"></ion-icon>
-            </div>
-            <div class="nav-arrow" id="next-slide">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-            </div>
-          </div>
         </div>
         
         <!-- Location -->
         <div class="location">
-          <div class="address">23 abbas nasr city</div>
-          <div class="map-icon" id="map-btn">
-            <ion-icon name="location-outline"></ion-icon>
-          </div>
+            <div class="address"></div>
+            <div class="map-icon" id="map-btn">
+                <ion-icon name="navigate-outline"></ion-icon>
+            </div>
         </div>
         
-        <!-- Review -->
+        <!-- Reviews Section -->
         <div class="review-card">
-          <div class="rating-stars">
-            <span class="star" id="star-1">☆</span>
-            <span class="star" id="star-2">☆</span>
-            <span class="star" id="star-3">☆</span>
-            <span class="star" id="star-4">☆</span>
-            <span class="star" id="star-5">☆</span>
-          </div>
-          <div class="review-title">Review title</div>
-          <div class="review-text">Review body</div>
-          <div class="reviewer">
-            <div class="reviewer-avatar">
-              <img src="https://i.pravatar.cc/100" alt="Reviewer">
+            <div class="rating-stars">
+              <span class="star active"><ion-icon name="star"></ion-icon></span>
+              <span class="star active"><ion-icon name="star"></ion-icon></span>
+              <span class="star active"><ion-icon name="star"></ion-icon></span>
+              <span class="star"><ion-icon name="star-outline"></ion-icon></span>
+              <span class="star"><ion-icon name="star-outline"></ion-icon></span>
             </div>
-            <div class="reviewer-info">
-              <div class="reviewer-name">Reviewer name</div>
-              <div class="reviewer-date">Date</div>
+            <div class="review-title">Authentic Egyptian Koshri</div>
+            <div class="review-text">Best koshri I've ever had! The flavors are authentic and the portion sizes are generous. The service was quick and the staff were very friendly. Would definitely recommend to anyone looking for real Egyptian cuisine!</div>
+            <div class="reviewer">
+                <div class="reviewer-avatar">
+                    <img src="https://i.pravatar.cc/100?img=33" alt="Ahmed M.">
+                </div>
+                <div class="reviewer-info">
+                    <div class="reviewer-name">Ahmed M.</div>
+                    <div class="reviewer-date">March 10, 2025</div>
+                </div>
             </div>
-          </div>
+        </div>
+        
+        <!-- Add another review card -->
+        <div class="review-card">
+            <div class="rating-stars">
+                <span class="star active"><ion-icon name="star"></ion-icon></span>
+                <span class="star active"><ion-icon name="star"></ion-icon></span>
+                <span class="star active"><ion-icon name="star"></ion-icon></span>
+                <span class="star active"><ion-icon name="star"></ion-icon></span>
+                <span class="star"><ion-icon name="star-outline"></ion-icon></span>
+            </div>
+            <div class="review-title">Great Value for Money</div>
+            <div class="review-text">The koshri here is delicious and very affordable. I love that they're open 24/7 - perfect for late night cravings! The location is convenient and easy to find.</div>
+            <div class="reviewer">
+                <div class="reviewer-avatar">
+                    <img src="https://i.pravatar.cc/100?img=28" alt="Sara T.">
+                </div>
+                <div class="reviewer-info">
+                    <div class="reviewer-name">Sara T.</div>
+                    <div class="reviewer-date">March 5, 2025</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Special Offers Section -->
+        <div class="review-card">
+            <div class="review-title">
+                <ion-icon name="gift-outline"></ion-icon>
+                Special Offers
+            </div>
+            <div class="review-text">
+                <ul>
+                    <li>10% off for online orders</li>
+                    <li>Free delivery on orders over 80 EGP</li>
+                    <li>Student discount: 15% with valid ID</li>
+                </ul>
+            </div>
         </div>
         
         <!-- Bottom Navigation -->
         <div class="bottom-nav">
-          <div class="call-btn" id="call-btn">
-            <div class="phone-icon">📞</div>
-          </div>
-          <div class="scan-btn" id="scan-btn">ready to scan</div>
+            <div class="call-btn" id="call-btn">
+                <div class="phone-icon"></div>
+            </div>
+            <div class="scan-btn" id="scan-btn">SCAN QR CODE</div>
         </div>
-      </div>
-      
-      <!-- Toast Message -->
-      <div class="toast-message" id="toast-message"></div>
-      
-      <script src="../../assets/js/businesses.js"></script>
-    <script
-    type="module"
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-  ></script>
-  <script
-    nomodule
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-  ></script>
+    </div>
+    
+    <!-- Toast Message -->
+    <div class="toast-message" id="toast-message"></div>
+    
+    <script src="../../assets/js/businesses.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
