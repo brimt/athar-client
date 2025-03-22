@@ -3,13 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home-athar</title>
+    <title>Athar - Explore Nearby</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+  <style>
+ 
+  </style>
   <body>
+    <!-- Header Section -->
     <div class="section1-container">
       <div class="logo-container">
         <div class="header">
@@ -23,53 +27,101 @@
         </div>
       </div>
       <div class="search">
-        <input type="text" class="search-input" placeholder="Search" />
+        <input type="text" class="search-input" placeholder="Search for businesses..." />
       </div>
     </div>
 
+    <!-- QR Code & Points Section -->
     <div class="section3-container">
       <div class="qr-code">
         <ion-icon name="qr-code-outline"></ion-icon>
-
       </div>
       <div class="points">
-        <span>Your Points 0</span>
+        <span>Your Points</span>
+        <div class="points-value">0</div>
       </div>
     </div>
 
+    <!-- Banner Section -->
     <div class="section4-container">
-      <img src="http://picsum.photos/300/150" alt="">
+      <img src="http://picsum.photos/300/150" alt="Featured promotion">
     </div>
 
+    <!-- Nearby Businesses Section -->
     <div class="section5-container">
       <div class="business-title">
-        <h2>nearby businesses</h2>
-        <a href="businesses-list/index.html">View All</a>
+        <h2>Nearby Businesses</h2>
+        <a href="../businesses-list/index.html">View All</a>
       </div>
       <!-- Slider for nearby businesses -->
       <div class="business-slider">
         <div class="business-slide">
-          <img src="http://picsum.photos/100/100" alt="Business 1">
+          <img src="http://picsum.photos/100/100" alt="Coffee Haven">
           <div class="business-info">
-            <h3>Business 1</h3>
-
+            <h3>Coffee Haven</h3>
+            <div class="business-rating">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star-half"></ion-icon>
+              <span>4.5</span>
+            </div>
           </div>
         </div>
         <div class="business-slide">
-          <img src="http://picsum.photos/100/100" alt="Business 2">
+          <img src="http://picsum.photos/100/100" alt="Green Market">
           <div class="business-info">
-            <h3>Business 2</h3>
+            <h3>Green Market</h3>
+            <div class="business-rating">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star-outline"></ion-icon>
+              <span>4.0</span>
+            </div>
           </div>
         </div>
         <div class="business-slide">
-          <img src="http://picsum.photos/100/100" alt="Business 3">
+          <img src="http://picsum.photos/100/100" alt="Tech Hub">
           <div class="business-info">
-            <h3>Business 3</h3>
+            <h3>Tech Hub</h3>
+            <div class="business-rating">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <span>5.0</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Earn Points Section -->
+    <div class="section6-container">
+      <h2>Earn Points</h2>
+      <div class="points-cards">
+        <div class="points-card">
+          <div class="card-icon">
+            <ion-icon name="cafe-outline"></ion-icon>
+          </div>
+          <h3>Visit Businesses</h3>
+          <p>Earn points by visiting our partner locations</p>
+        </div>
+        <div class="points-card">
+          <div class="card-icon">
+            <ion-icon name="share-social-outline"></ion-icon>
+          </div>
+          <h3>Share & Refer</h3>
+          <p>Get points when friends join using your code</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
     <nav class="navigation">
       <ul>
         <li class="active-link">
@@ -85,7 +137,7 @@
             <ion-icon name="business-outline"></ion-icon>
           </span>
           <span class="title">
-            <a href="businesses-list/index.html">businesses</a>
+            <a href="businesses-list/index.html">Businesses</a>
           </span>
         </li>
         <li>
@@ -93,14 +145,13 @@
             <ion-icon name="person-outline"></ion-icon>
           </span>
           <span class="title">
-            <a href="profile/index.html">profile</a>
+            <a href="profile/index.html">Profile</a>
           </span>
         </li>
       </ul>
     </nav>
 
-
-    <script src="/assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

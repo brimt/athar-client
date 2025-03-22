@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
+    <title>User Profile | Athar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/profile.css">
 </head>
 <body>
     <div class="profile-container">
+        <!-- Profile Header -->
         <div class="header">
             <div class="avatar">
                 <div class="avatar-icon">
@@ -19,67 +23,93 @@
             <button class="edit-profile">edit profile</button>
         </div>
         
+        <!-- Stats Cards -->
+        <div class="stats-section">
+            <div class="stats-cards">
+                <div class="stats-card">
+                    <div class="stats-value">0</div>
+                    <div class="stats-label">points</div>
+                </div>
+                <div class="stats-card">
+                    <div class="stats-value">3</div>
+                    <div class="stats-label">visits</div>
+                </div>
+                <div class="stats-card">
+                    <div class="stats-value">2</div>
+                    <div class="stats-label">referrals</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Profile Menu -->
         <div class="menu-section">
-            <div class="menu-item">
-                <span class="menu-item-icon">
+            <div class="menu-header">
+                <span class="menu-header-icon">
                   <ion-icon name="person-outline"></ion-icon>
                 </span>
-                <span class="menu-item-text">personal data</span>
-                <span class="arrow-icon">&#10095;</span>
+                <span class="menu-header-text">personal data</span>
             </div>
             
             <div class="menu-item">
                 <span class="menu-item-icon">
-                  <ion-icon name="chatbox-outline"></ion-icon>
+                  <ion-icon name="gift-outline"></ion-icon>
                 </span>
-                <span class="menu-item-text">reviews</span>
-                <span class="arrow-icon">&#10095;</span>
-            </div>
-            
-            <div class="menu-item">
-                <span class="menu-item-icon">&#9679;</span>
-                <span class="menu-item-text">points</span>
-                <span class="arrow-icon">&#10095;</span>
+                <span class="menu-item-text">my rewards</span>
             </div>
             
             <div class="menu-item">
                 <span class="menu-item-icon">
                   <ion-icon name="location-outline"></ion-icon>
                 </span>
-                <span class="menu-item-text">address</span>
-                <span class="arrow-icon">&#10095;</span>
+                <span class="menu-item-text">saved addresses</span>
             </div>
             
             <div class="menu-item">
                 <span class="menu-item-icon">
-                  <ion-icon name="heart-circle-outline"></ion-icon>
+                  <ion-icon name="time-outline"></ion-icon>
                 </span>
-                <span class="menu-item-text">favorites</span>
-                <span class="arrow-icon">&#10095;</span>
+                <span class="menu-item-text">visit history</span>
             </div>
         </div>
         
+        <!-- Settings Section -->
         <div class="settings-section">
             <div class="settings-header">
-                <span class="settings-icon">&#9881;</span>
+                <span class="settings-icon">
+                  <ion-icon name="settings-outline"></ion-icon>
+                </span>
                 <span class="settings-title">settings</span>
             </div>
             
-
-            
             <div class="settings-item language-selector">
                 <span class="settings-item-text">language</span>
-                <span class="selected-language">english (US) &#9662;</span>
+                <span class="selected-language">english (US)</span>
+            </div>
+            
+            <div class="settings-item">
+                <span class="settings-item-text">notifications</span>
+                <span class="toggle-switch">
+                  <ion-icon name="toggle"></ion-icon>
+                </span>
+            </div>
+            
+            <div class="settings-item">
+                <span class="settings-item-text">privacy settings</span>
+                <span class="arrow-icon">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </span>
             </div>
             
             <div class="delete-account">
-                <span class="delete-icon"><ion-icon name="trash-outline"></ion-icon></span>
+                <span class="delete-icon">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </span>
                 <span class="delete-text">delete account</span>
-                <span class="arrow-icon">&#10095;</span>
             </div>
         </div>
     </div>
     
+    <!-- Navigation -->
     <nav class="navigation">
       <ul>
         <li>
@@ -95,27 +125,21 @@
             <ion-icon name="business-outline"></ion-icon>
           </span>
           <span class="title">
-            <a href="../businesses-list/index.html">businesses</a>
+            <a href="../businesses-list/index.html">Businesses</a>
           </span>
         </li>
-        <li  class="active-link">
+        <li class="active-link">
           <span class="icon">
             <ion-icon name="person-outline"></ion-icon>
           </span>
           <span class="title">
-            <a href="#">profile</a>
+            <a href="#">Profile</a>
           </span>
         </li>
       </ul>
     </nav>
-
-    <script
-    type="module"
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-  ></script>
-  <script
-    nomodule
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-  ></script>
+    <script src="../assets/js/profile.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

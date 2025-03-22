@@ -3,89 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Businesses</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Athar - Businesses Nearby</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/business-list.css">
-    <style>
-       
-    </style>
 </head>
 <body>
     <div class="container">
-        <div class="search-container">
-            <ion-icon name="search-outline" class="search-icon"></ion-icon>
-            <input type="text" class="search-input" placeholder="Find restaurants, cafes, etc...">
+        <!-- Header with back button -->
+        <div class="header-container">
+
+            <h1 class="page-title">Explore Businesses</h1>
         </div>
         
-        <!-- Filter Tabs -->
-        <div class="filter-tabs">
-            <div class="filter-tab active">All</div>
-            <div class="filter-tab">Egyptian</div>
-            <div class="filter-tab">Fast Food</div>
-            <div class="filter-tab">Coffee</div>
-            <div class="filter-tab">Italian</div>
-            <div class="filter-tab">Asian</div>
+        <!-- Search Container -->
+        <div class="search-container">
+            <ion-icon name="search-outline" class="search-icon"></ion-icon>
+            <input type="text" class="search-input" placeholder="Find restaurants, cafes, shops...">
+            <div class="filter-button">
+                <ion-icon name="options-outline"></ion-icon>
+            </div>
+        </div>
+        
+        <!-- Featured Section -->
+        <div class="section-header">
+            <div class="section-title">Featured Places</div>
+            <div class="section-action">View all</div>
+        </div>
+        
+        <!-- Featured Places Horizontal Scroll -->
+        <div class="featured-slider">
+            <div class="featured-card">
+                <div class="featured-image">
+                    <img src="http://picsum.photos/300/150" alt="Koshri Abo Tarek">
+                    <div class="featured-badge">Popular</div>
+                </div>
+                <div class="featured-info">
+                    <h3>Koshri Abo Tarek</h3>
+                    <div class="featured-meta">
+                        <div class="business-type">Egyptian • Koshri</div>
+                        <div class="business-rating">
+                            <ion-icon name="star"></ion-icon>
+                            <span>4.7</span>
+                        </div>
+                    </div>
+                    <div class="distance-info">
+                        <ion-icon name="location-outline"></ion-icon>
+                        <span>1.2 km away</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="featured-card">
+                <div class="featured-image">
+                    <img src="http://picsum.photos/300/150" alt="Cairo Coffee Co">
+                    <div class="featured-badge">Top Rated</div>
+                </div>
+                <div class="featured-info">
+                    <h3>Cairo Coffee Co</h3>
+                    <div class="featured-meta">
+                        <div class="business-type">Cafe • Coffee</div>
+                        <div class="business-rating">
+                            <ion-icon name="star"></ion-icon>
+                            <span>4.9</span>
+                        </div>
+                    </div>
+                    <div class="distance-info">
+                        <ion-icon name="location-outline"></ion-icon>
+                        <span>0.8 km away</span>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <!-- Popular Section -->
         <div class="section-header">
             <div class="section-title">Popular Businesses</div>
-            <div class="section-action">See All</div>
+            <div class="section-action">See all</div>
         </div>
         
         <div class="business-list">
             <!-- Koshri Abo Tarek -->
             <a href="../businesses/index.html" class="business-card">
-                <div class="business-logo logo-bg-1">KAT</div>
+                <div class="business-image">
+                    <img src="http://picsum.photos/100/100" alt="Koshri Abo Tarek">
+                </div>
                 <div class="business-info">
                     <div class="business-name">Koshri Abo Tarek</div>
                     <div class="business-type">Egyptian • Koshri</div>
-                    <div class="business-rating">
-                        <span>★</span> 4.2 (324 reviews)
+                    <div class="business-details">
+                        <div class="business-rating">
+                            <ion-icon name="star"></ion-icon>
+                            <span>4.7</span>
+                        </div>
+                        <div class="business-distance">1.2 km</div>
                     </div>
                     <div class="business-status status-open">Open 24/7</div>
+                </div>
+                <div class="points-reward">
+                    <div class="points-icon">
+                        <ion-icon name="leaf-outline"></ion-icon>
+                    </div>
+                    <div class="points-value">%15</div>
                 </div>
             </a>
             
             <!-- Cairo Coffee Co -->
-            <div class="business-card">
-                <a href="../businesses/index.html" class="business-card">
-                    <div class="business-logo logo-bg-2">CCC</div>
-                    <div class="business-info">
-                        <div class="business-name">Cairo Coffee Co</div>
-                        <div class="business-type">Cafe • Coffee</div>
+            <a href="../businesses/index.html" class="business-card">
+                <div class="business-image">
+                    <img src="http://picsum.photos/100/100" alt="Cairo Coffee Co">
+                </div>
+                <div class="business-info">
+                    <div class="business-name">Cairo Coffee Co</div>
+                    <div class="business-type">Cafe • Coffee</div>
+                    <div class="business-details">
                         <div class="business-rating">
-                            <span>★</span> 4.5 (218 reviews)
+                            <ion-icon name="star"></ion-icon>
+                            <span>4.9</span>
                         </div>
-                        <div class="business-status status-open">Open until 11PM</div>
+                        <div class="business-distance">0.8 km</div>
                     </div>
-
-                </a>
-            </div>
+                    <div class="business-status status-open">Open until 11PM</div>
+                </div>
+                <div class="points-reward">
+                    <div class="points-icon">
+                        <ion-icon name="leaf-outline"></ion-icon>
+                    </div>
+                    <div class="points-value">%10</div>
+                </div>
+            </a>
             
             <!-- El Dahan Grill -->
             <div class="business-card">
-                <div class="business-logo logo-bg-3">EDG</div>
+                <div class="business-image">
+                    <img src="http://picsum.photos/100/100" alt="El Dahan Grill">
+                </div>
                 <div class="business-info">
                     <div class="business-name">El Dahan Grill</div>
                     <div class="business-type">Egyptian • Grilled Meat</div>
-                    <div class="business-rating">
-                        <span>★</span> 4.7 (421 reviews)
+                    <div class="business-details">
+                        <div class="business-rating">
+                            <ion-icon name="star"></ion-icon>
+                            <span>4.5</span>
+                        </div>
+                        <div class="business-distance">2.1 km</div>
                     </div>
                     <div class="business-status status-open">Open until 12AM</div>
+                </div>
+                <div class="points-reward">
+                    <div class="points-icon">
+                        <ion-icon name="leaf-outline"></ion-icon>
+                    </div>
+                    <div class="points-value">%12</div>
                 </div>
             </div>
             
             <!-- Napoli Pizza -->
             <div class="business-card">
-                <div class="business-logo logo-bg-4">NP</div>
+                <div class="business-image">
+                    <img src="http://picsum.photos/100/100" alt="Napoli Pizza">
+                </div>
                 <div class="business-info">
                     <div class="business-name">Napoli Pizza</div>
                     <div class="business-type">Italian • Pizza</div>
-                    <div class="business-rating">
-                        <span>★</span> 4.0 (187 reviews)
+                    <div class="business-details">
+                        <div class="business-rating">
+                            <ion-icon name="star"></ion-icon>
+                            <span>4.2</span>
+                        </div>
+                        <div class="business-distance">1.5 km</div>
                     </div>
                     <div class="business-status status-closed">Opens at 11AM</div>
+                </div>
+                <div class="points-reward">
+                    <div class="points-icon">
+                        <ion-icon name="leaf-outline"></ion-icon>
+                    </div>
+                    <div class="points-value">%8</div>
                 </div>
             </div>
         </div>
@@ -93,69 +188,99 @@
         <!-- Nearby Section -->
         <div class="section-header">
             <div class="section-title">Nearby Places</div>
-            <div class="section-action">See All</div>
+            <div class="section-action">See all</div>
         </div>
         
         <div class="business-list">
             <!-- El Tabei -->
             <div class="business-card">
-                <div class="business-logo logo-bg-3">ET</div>
+                <div class="business-image">
+                    <img src="http://picsum.photos/100/100" alt="El Tabei El Domyati">
+                </div>
                 <div class="business-info">
                     <div class="business-name">El Tabei El Domyati</div>
                     <div class="business-type">Egyptian • Seafood</div>
-                    <div class="business-rating">
-                        <span>★</span> 4.4 (256 reviews)
+                    <div class="business-details">
+                        <div class="business-rating">
+                            <ion-icon name="star"></ion-icon>
+                            <span>4.4</span>
+                        </div>
+                        <div class="business-distance">0.5 km</div>
                     </div>
                     <div class="business-status status-open">Open until 10PM</div>
+                </div>
+                <div class="points-reward">
+                    <div class="points-icon">
+                        <ion-icon name="leaf-outline"></ion-icon>
+                    </div>
+                    <div class="points-value">%9</div>
                 </div>
             </div>
             
             <!-- Zooba -->
             <div class="business-card">
-                <div class="business-logo logo-bg-1">ZB</div>
+                <div class="business-image">
+                    <img src="http://picsum.photos/100/100" alt="Zooba">
+                </div>
                 <div class="business-info">
                     <div class="business-name">Zooba</div>
                     <div class="business-type">Egyptian • Street Food</div>
-                    <div class="business-rating">
-                        <span>★</span> 4.3 (198 reviews)
+                    <div class="business-details">
+                        <div class="business-rating">
+                            <ion-icon name="star"></ion-icon>
+                            <span>4.3</span>
+                        </div>
+                        <div class="business-distance">0.7 km</div>
                     </div>
                     <div class="business-status status-open">Open until 1AM</div>
                 </div>
+                <div class="points-reward">
+                    <div class="points-icon">
+                        <ion-icon name="leaf-outline"></ion-icon>
+                    </div>
+                    <div class="points-value">%11</div>
+                </div>
             </div>
         </div>
-        <nav class="navigation">
-            <ul>
-              <li>
-                <span class="icon">
-                  <ion-icon name="home-outline"></ion-icon>
-                </span>
-                <span class="title">
-                  <a href="../index.html">Home</a>
-                </span>
-              </li>
-              <li class="active-link">
-                <span class="icon">
-                  <ion-icon name="business-outline"></ion-icon>
-                </span>
-                <span class="title">
-                  <a href="#">businesses</a>
-                </span>
-              </li>
-              <li>
-                <span class="icon">
-                  <ion-icon name="person-outline"></ion-icon>
-                </span>
-                <span class="title">
-                  <a href="../profile/index.html">profile</a>
-                </span>
-              </li>
-            </ul>
-          </nav>
     </div>
+
+    <!-- Navigation -->
+    <nav class="navigation">
+        <ul>
+            <li>
+                <span class="icon">
+                    <ion-icon name="home-outline"></ion-icon>
+                </span>
+                <span class="title">
+                    <a href="../index.html">Home</a>
+                </span>
+            </li>
+            <li class="active-link">
+                <span class="icon">
+                    <ion-icon name="business-outline"></ion-icon>
+                </span>
+                <span class="title">
+                    <a href="#">Businesses</a>
+                </span>
+            </li>
+            <li>
+                <span class="icon">
+                    <ion-icon name="person-outline"></ion-icon>
+                </span>
+                <span class="title">
+                    <a href="../profile/index.html">Profile</a>
+                </span>
+            </li>
+        </ul>
+    </nav>
+
     <div class="toast-message" id="toast-message"></div>
-    
+    <div class="loading-overlay">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading nearby businesses...</div>
+</div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="../../assets/js/businesses-list.js"></script>
+    <script src="../assets/js/businesses-list.js"></script>
 </body>
 </html>
