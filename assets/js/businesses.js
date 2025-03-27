@@ -202,6 +202,9 @@ document.addEventListener('DOMContentLoaded', function() {
     slideInterval = setInterval(goToNextSlide, 5000);
   });
 
+  setTimeout(() => {
+    document.body.classList.add('loaded');
+}, 500);
 
   heartBtn.innerHTML = '<ion-icon name="heart-outline"></ion-icon>';
   document.querySelector('.phone-icon').innerHTML = '<ion-icon name="call"></ion-icon>';

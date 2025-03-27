@@ -1,0 +1,223 @@
+:root {
+    --primary-color: #5d4037;
+    --accent-color: #e8d5b0;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --background-light: #f5f5f5;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --radius: 16px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+}
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+}
+
+.page-title{
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg);
+    background: linear-gradient(135deg, var(--accent-color), #d4b78c);
+    border-radius: 0 0 var(--radius) var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.vouchers-container {
+    margin: var(--spacing-md);
+}
+
+.voucher-filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-md);
+}
+
+.filter-btn {
+    flex: 1;
+    padding: var(--spacing-sm);
+    margin: 0 var(--spacing-sm);
+    border: none;
+    background-color: var(--background-light);
+    color: var(--primary-color);
+    border-radius: var(--radius);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.vouchers-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.voucher-card {
+    background-color: #ffffff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.voucher-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.voucher-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
+    background-color: var(--background-light);
+}
+
+.voucher-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.voucher-brand img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.voucher-brand h3 {
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.voucher-status {
+    padding: var(--spacing-sm);
+    border-radius: var(--radius);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.voucher-status.active {
+    background-color: rgba(46, 125, 50, 0.1);
+    color: #2e7d32;
+}
+
+.voucher-status.expired {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: #f44336;
+}
+
+.voucher-details {
+    padding: var(--spacing-md);
+}
+
+.voucher-code {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-light);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius);
+    margin-bottom: var(--spacing-sm);
+}
+
+.voucher-code span {
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+}
+
+.voucher-code button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.voucher-code button:hover {
+    opacity: 0.9;
+}
+
+.voucher-details p {
+    color: #666;
+    margin-bottom: var(--spacing-sm);
+}
+
+.voucher-validity {
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-size: 14px;
+}
+
+.voucher-validity ion-icon {
+    margin-right: var(--spacing-sm);
+    color: var(--primary-color);
+}
+
+.back-button {
+    color: var(--primary-color);
+    margin-right: var(--spacing-md);
+}
+
+.back-button ion-icon {
+    font-size: 24px;
+}
+
+.vouchers-list.compact .voucher-card {
+    flex-direction: column;
+}
+
+.vouchers-list.compact .voucher-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+}
+
+.voucher-card {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.filter-btn {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: rgba(93, 64, 55, 0.1);
+}
+
+.filter-btn.active:hover {
+    background-color: var(--primary-color);
+    opacity: 0.9;
+}
+
+.voucher-code button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.voucher-code button:active {
+    transform: scale(0.95);
+}

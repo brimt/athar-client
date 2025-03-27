@@ -270,7 +270,6 @@ body {
     scroll-snap-type: x mandatory;
     gap: var(--spacing-md);
     padding: var(--spacing-sm) 0 var(--spacing-md);
-    scrollbar-width: none;
 }
 
 .business-slider::-webkit-scrollbar {
@@ -305,7 +304,6 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
     padding: var(--spacing-md);
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     border-radius: 0 0 var(--radius) var(--radius);
@@ -333,7 +331,7 @@ body {
 }
 
 .business-rating span {
-    color: #ffffff;
+    color: var(--text-dark);
     font-size: 14px;
     margin-left: 5px;
 }
@@ -420,8 +418,6 @@ body {
 
 .business-card .business-info {
     position: static;
-    padding: 15px;
-    flex: 1;
     background: none;
 }
 
@@ -484,7 +480,6 @@ body {
     gap: var(--spacing-md);
     overflow-x: auto;
     padding-bottom: var(--spacing-md);
-    scrollbar-width: none;
 }
 
 .points-cards::-webkit-scrollbar {
@@ -750,12 +745,13 @@ body {
 
 /* Featured slider styles */
 .featured-slider {
-    display: flex;
-    overflow-x: auto;
-    gap: var(--spacing-md);
-    padding: 0 var(--spacing-md) var(--spacing-md);
-    scrollbar-width: none;
-    scroll-snap-type: x mandatory;
+    display: flex ;
+        margin-left: var(--spacing-sm);
+        margin-right: var(--spacing-sm);
+        gap: var(--spacing-md);
+        overflow-x: auto;
+
+        scroll-snap-type: x mandatory;
 }
 
 .featured-slider::-webkit-scrollbar {
@@ -793,7 +789,7 @@ body {
     top: var(--spacing-sm);
     right: var(--spacing-sm);
     background-color: var(--primary-color);
-    color: var(--text-light);
+    color: var(--accent-color);
     font-size: 12px;
     font-weight: 500;
     padding: 4px 10px;
@@ -897,7 +893,7 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 30px;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
