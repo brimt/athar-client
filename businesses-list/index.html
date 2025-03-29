@@ -34,6 +34,10 @@
                 <div class="business-image-info">
                     <div class="business-image">
                         <img src="http://picsum.photos/100/100" alt="Koshri Abo Tarek">
+                        <div class="popular-flag">
+                            <i class="fa-solid fa-fire"></i>
+                            <span>Popular</span>
+                        </div>
                     </div>
                     <div class="business-info">
                         <div class="business-name">Koshri Abo Tarek</div>
@@ -91,7 +95,7 @@
             </a>
 
             <!-- El Dahan Grill -->
-            <div class="business-card">
+            <a href="../businesses/" class="business-card">
                 <div class="business-image-info">
 
                     <div class="business-image">
@@ -119,10 +123,10 @@
                     </div>
                     <div class="points-value">%12</div>
                 </div>
-            </div>
+            </a>
 
             <!-- Napoli Pizza -->
-            <div class="business-card">
+            <a href="../businesses/" class="business-card">
                 <div class="business-image-info">
                     <div class="business-image">
                         <img src="http://picsum.photos/100/100" alt="Napoli Pizza">
@@ -149,11 +153,11 @@
                     </div>
                     <div class="points-value">%8</div>
                 </div>
-            </div>
+            </a>
 
             <!-- El Tabei -->
 
-            <div class="business-card">
+            <a href="../businesses/" class="business-card">
                 <div class="business-image-info">
                     <div class="business-image">
                         <img src="http://picsum.photos/100/100" alt="El Tabei El Domyati">
@@ -181,10 +185,10 @@
                     </div>
                     <div class="points-value">%9</div>
                 </div>
-            </div>
+            </a>
 
             <!-- Zooba -->
-            <div class="business-card">
+            <a href="../businesses/" class="business-card">
                 <div class="business-image-info">
 
                     <div class="business-image">
@@ -212,9 +216,11 @@
                     </div>
                     <div class="points-value">%11</div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
+
+
 
     <!-- Navigation -->
     <nav class="navigation">
@@ -253,6 +259,136 @@
         <div class="loading-spinner"></div>
         <div class="loading-text">Loading nearby businesses...</div>
     </div>
+
+    <!-- Filter Modal -->
+    <div class="filter-modal" id="filter-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Filter Businesses</h2>
+                <button class="close-modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="filter-section">
+                    <h3>Business Type</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="type" value="restaurant">
+                            <span>Restaurants</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="type" value="cafe">
+                            <span>Cafes</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="type" value="shop">
+                            <span>Shops</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Distance</h3>
+                    <div class="filter-options">
+                        <div class="distance-input-container">
+                            <input type="number" name="distance" id="distance-input" min="0" step="0.1" placeholder="Enter distance">
+                            <span class="distance-unit">km</span>
+                        </div>
+                        <div class="quick-distance-options">
+                            <label class="filter-option">
+                                <input type="radio" name="quick-distance" value="1">
+                                <span>Within 1 km</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="quick-distance" value="3">
+                                <span>Within 3 km</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="quick-distance" value="5">
+                                <span>Within 5 km</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Rating</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="radio" name="rating" value="5">
+                            <span>5 Stars</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="rating" value="4">
+                            <span>4+ Stars</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="rating" value="3">
+                            <span>3+ Stars</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="rating" value="2">
+                            <span>2+ Stars</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Points Reward</h3>
+                    <div class="filter-options">
+                        <div class="points-input-container">
+                            <input type="number" name="points" id="points-input" min="0" max="100" step="1" placeholder="Enter points">
+                            <span class="points-unit">%</span>
+                        </div>
+                        <div class="quick-points-options">
+                            <label class="filter-option">
+                                <input type="radio" name="quick-points" value="15">
+                                <span>15% or more</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="quick-points" value="10">
+                                <span>10% or more</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="quick-points" value="5">
+                                <span>5% or more</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Popular</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="popular" value="true">
+                            <span>Show Popular Businesses</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Status</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="status" value="open">
+                            <span>Open Now</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="status" value="closed">
+                            <span>Closed</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="reset-filters">Reset</button>
+                <button class="apply-filters">Apply Filters</button>
+            </div>
+        </div>
+    </div>
+
     <script src="../assets/js/businesses-list.js"></script>
 </body>
 

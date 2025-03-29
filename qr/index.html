@@ -6,10 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/qr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <div id="reader" width="600px"></div>
+
+    <!-- Navigation -->
+    <nav class="navigation">
+        <ul>
+            <li>
+                <a href="../">
+                    <span class="icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="../businesses-list/">
+                    <span class="icon">
+                        <i class="fa-solid fa-building"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="../profile/">
+                    <span class="icon">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                </a>
+            </li>
+            <li class="active-link">
+                <a href="./">
+                    <span class="icon">
+                        <i class="fa-solid fa-qrcode"></i>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
     <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
     <script src="../assets/js/qr.js"></script>
