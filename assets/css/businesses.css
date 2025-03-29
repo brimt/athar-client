@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #5d4037 ;
-  --accent-color: #e8d5b0 ;
+  --primary-color: #5d4037;
+  --accent-color: #e8d5b0;
   --text-dark: #333333;
-  --light: #f5f5f5 ;
+  --light: #f5f5f5;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   --radius: 16px;
   --spacing-sm: 8px;
@@ -67,15 +67,15 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-.back-arrow{
+.back-arrow {
   font-size: 24px;
   color: var(--text-dark) !important;
   transition: all 0.3s ease;
 }
 
-.heart-icon{
+.heart-icon {
   font-size: 24px;
-  color: var(--text-dark) ;
+  color: var(--text-dark);
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
@@ -98,7 +98,7 @@ body {
 
 .heart-icon:hover {
   color: #ff6b6b;
-  background-color:#ff6b6b ;
+  background-color: #ff6b6b;
 }
 
 .heart-icon.active {
@@ -346,8 +346,6 @@ body {
   background-color: #000;
   border-radius: 50%;
 }
-
-
 
 .tag-container {
   padding: 15px 15px 5px;
@@ -602,6 +600,10 @@ body {
   color: var(--light);
 }
 
+.rating-stars i {
+  color: #ffc107;
+}
+
 .star {
   cursor: pointer;
   transition: all 0.2s ease;
@@ -701,7 +703,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:var(--accent-color);
+  background-color: var(--accent-color);
   color: var(--primary-color);
   font-weight: 600;
   cursor: pointer;
@@ -743,11 +745,21 @@ body {
 
 /* Added animation for heart */
 @keyframes heartbeat {
-  0% { transform: scale(1); }
-  25% { transform: scale(1.3); }
-  50% { transform: scale(1); }
-  75% { transform: scale(1.3); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .heart-animation {
@@ -761,51 +773,54 @@ body {
     max-width: 100%;
     margin: 0 0 70px 0;
   }
-  
+
   .image-slider {
     margin: 10px;
     height: 200px;
   }
 }
 
-
 .loading-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 body.loaded .loading-overlay {
-    opacity: 0;
-    visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .loading-spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid rgba(93, 64, 55, 0.1);
-    border-radius: 50%;
-    border-top-color: var(--primary-color);
-    animation: spin 1s linear infinite;
-    margin-bottom: var(--spacing-md);
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(93, 64, 55, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s linear infinite;
+  margin-bottom: var(--spacing-md);
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .loading-text {
-    font-size: 16px;
-    color: var(--primary-color);
-    font-weight: 500;
+  font-size: 16px;
+  color: var(--primary-color);
+  font-weight: 500;
 }

@@ -1,370 +1,378 @@
 :root {
-    --primary-color: #5d4037;
-    --accent-color: #e8d5b0;
-    --text-light: #ffffff;
-    --text-dark: #333333;
-    --background-light: #f5f5f5;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --radius: 16px;
-    --spacing-sm: 8px;
-    --spacing-md: 16px;
-    --spacing-lg: 24px;
+  --primary-color: #5d4037;
+  --accent-color: #e8d5b0;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --background-light: #f5f5f5;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --radius: 16px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
 }
-*{
-    margin: 0 ;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--background-light);
-    color: var(--text-dark);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.page-title{
-    font-weight: 600;
-    color: var(--primary-color);
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+}
+
+.page-title {
+  font-weight: 600;
+  color: var(--primary-color);
 }
 
 .header-container {
-    display: flex;
-    align-items: center;
-    padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg);
-    background: linear-gradient(135deg, var(--accent-color), #d4b78c);
-    border-radius: 0 0 var(--radius) var(--radius);
-    box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg);
+  background: linear-gradient(135deg, var(--accent-color), #d4b78c);
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: var(--shadow);
 }
 
 .vouchers-container {
-    margin: var(--spacing-md);
-    margin-bottom: 100px;
+  margin: var(--spacing-md);
+  margin-bottom: 100px;
 }
 
 .voucher-filters {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
 }
 
 .filter-btn {
-    flex: 1;
-    padding: var(--spacing-sm);
-    margin: 0 var(--spacing-sm);
-    border: none;
-    background-color: var(--background-light);
-    color: var(--primary-color);
-    border-radius: var(--radius);
-    font-weight: 500;
-    transition: all 0.3s ease;
+  flex: 1;
+  padding: var(--spacing-sm);
+  margin: 0 var(--spacing-sm);
+  border: none;
+  background-color: var(--background-light);
+  color: var(--primary-color);
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .filter-btn.active {
-    background-color: var(--primary-color);
-    color: var(--text-light);
+  background-color: var(--primary-color);
+  color: var(--text-light);
 }
 
 .vouchers-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
 }
 
 .voucher-card {
-    background-color: #ffffff;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    transition: all 0.3s ease;
+  background-color: #ffffff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .voucher-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .voucher-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--spacing-md);
-    background-color: var(--background-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  background-color: var(--background-light);
 }
 
 .voucher-brand {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
 }
 
 .voucher-brand img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .voucher-brand h3 {
-    font-size: 18px;
-    color: var(--primary-color);
+  font-size: 18px;
+  color: var(--primary-color);
 }
 
 .voucher-status {
-    padding: var(--spacing-sm);
-    border-radius: var(--radius);
-    font-size: 12px;
-    font-weight: 600;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius);
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .voucher-status.active {
-    background-color: rgba(46, 125, 50, 0.1);
-    color: #2e7d32;
+  background-color: rgba(46, 125, 50, 0.1);
+  color: #2e7d32;
 }
 
 .voucher-status.expired {
-    background-color: rgba(244, 67, 54, 0.1);
-    color: #f44336;
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #f44336;
 }
 
 .voucher-details {
-    padding: var(--spacing-md);
+  padding: var(--spacing-md);
 }
 
 .voucher-code {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background-light);
-    padding: var(--spacing-sm);
-    border-radius: var(--radius);
-    margin-bottom: var(--spacing-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-light);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius);
+  margin-bottom: var(--spacing-sm);
 }
 
 .voucher-code span {
-    font-weight: 600;
-    color: var(--primary-color);
-    letter-spacing: 1px;
+  font-weight: 600;
+  color: var(--primary-color);
+  letter-spacing: 1px;
 }
 
 .voucher-code button {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    border: none;
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: var(--radius);
-    cursor: pointer;
-    transition: all 0.3s ease;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .voucher-code button:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 .voucher-details p {
-    color: #666;
-    margin-bottom: var(--spacing-sm);
+  color: #666;
+  margin-bottom: var(--spacing-sm);
 }
 
 .voucher-validity {
-    display: flex;
-    align-items: center;
-    color: #666;
-    font-size: 14px;
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 14px;
 }
 
-.voucher-validity ion-icon {
-    margin-right: var(--spacing-sm);
-    color: var(--primary-color);
+.voucher-validity i {
+  margin-right: var(--spacing-sm);
+  color: var(--primary-color);
 }
 
 .back-button {
-    color: var(--primary-color);
-    margin-right: var(--spacing-md);
+  color: var(--primary-color);
+  margin-right: var(--spacing-md);
 }
 
-.back-button ion-icon {
-    font-size: 24px;
+.back-button i {
+  font-size: 24px;
 }
 
 .vouchers-list.compact .voucher-card {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .vouchers-list.compact .voucher-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--spacing-sm);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
 }
 
 .voucher-card {
-    transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .filter-btn {
-    cursor: pointer;
-    transition: all 0.3s ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .filter-btn:hover {
-    background-color: rgba(93, 64, 55, 0.1);
+  background-color: rgba(93, 64, 55, 0.1);
 }
 
 .filter-btn.active:hover {
-    background-color: var(--primary-color);
-    opacity: 0.9;
+  background-color: var(--primary-color);
+  opacity: 0.9;
 }
 
 .voucher-code button {
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .voucher-code button:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
-
 .navigation {
-    background: linear-gradient(to right, #6d4c41, var(--primary-color));
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    border-top-left-radius: var(--radius);
-    border-top-right-radius: var(--radius);
-    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.2);
-    z-index: 100;
+  background: linear-gradient(to right, #6d4c41, var(--primary-color));
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.2);
+  z-index: 100;
 }
 
 .navigation ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;    
-    list-style: none;
-    position: relative;
-    padding: var(--spacing-sm) 0;
-    margin-bottom: -12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  padding: var(--spacing-sm) 0;
+  margin-bottom: -12px;
 }
 
 .navigation li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--text-light);
-    font-size: 8px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    padding: var(--spacing-sm);
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-light);
+  font-size: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: var(--spacing-sm);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 33.33%;
 }
 
 .navigation a {
-    text-align: center;
-    text-decoration: none;
-    list-style: none;
-    color: rgba(255, 255, 255, 0.7);
-    transition: all 0.3s ease;
-    width: 100%;
+  text-align: center;
+  text-decoration: none;
+  list-style: none;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  width: 100%;
 }
 
 .navigation .icon {
-    font-size: 20px;
-    margin-bottom: 6px;
-    position: relative;
-    z-index: 2;
-    transition: all 0.3s ease;
+  font-size: 20px;
+  margin-bottom: 6px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
 }
 
 .navigation .title {
-    font-size: 10px;
-    position: relative;
-    z-index: 2;
-    transition: all 0.3s ease;
-    opacity: 0.7;
+  font-size: 10px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  opacity: 0.7;
 }
 
 .navigation li::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--accent-color);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: -1;
-    border-radius: 50% 50% 0 0;
-    opacity: 0;
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: -1;
+  border-radius: 50% 50% 0 0;
+  opacity: 0;
 }
 
 /* Hover effects */
 .navigation li:hover::before {
-    top: 0;
-    border-radius: var(--radius);
-    opacity: 0.2;
+  top: 0;
+  border-radius: var(--radius);
+  opacity: 0.2;
 }
 
 .navigation li:hover .icon {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .navigation li:hover .title {
-    transform: translateY(2px);
-    color: var(--accent-color);
-    opacity: 1;
+  transform: translateY(2px);
+  color: var(--accent-color);
+  opacity: 1;
 }
 
 /* Active state styling */
 .active-link {
-    position: relative;
+  position: relative;
 }
 
 .active-link::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 3px;
-    background-color: var(--accent-color);
-    border-radius: 3px;
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 3px;
 }
 
-.active-link span, .active-link a {
-    color: var(--accent-color);
-    font-weight: 600;
-    opacity: 1;
+.active-link span,
+.active-link a {
+  color: var(--accent-color);
+  font-weight: 600;
+  opacity: 1;
 }
 
 .active-link .icon {
-    animation: pulse 1.5s infinite alternate;
+  animation: pulse 1.5s infinite alternate;
 }
 
 /* Animations */
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.15); }
-    100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes glow {
-    from { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
-    to { text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); }
+  from {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  to {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  }
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 380px) {
+  .section3-container > div {
+    margin-bottom: var(--spacing-md);
+  }
 
-    .section3-container > div {
-        margin-bottom: var(--spacing-md);
-    }
-    
-    .business-slide {
-        width: 85%;
-    }
+  .business-slide {
+    width: 85%;
+  }
 }

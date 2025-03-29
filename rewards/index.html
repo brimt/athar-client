@@ -1,95 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rewards & Vouchers</title>
-    <link rel="stylesheet" href="../assets/css/rewards.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rewards & Vouchers</title>
+  <link rel="stylesheet" href="../assets/css/rewards.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
 
   <div class="header-container">
     <h1 class="page-title">Rewards</h1>
   </div>
-  
+
   <div class="rewards-points-container">
     <h2 class="title">Your Points</h2>
     <div class="points-card">
       <div class="points-icon">
-            <ion-icon name="leaf-outline"></ion-icon>
-          </div>
-          <div class="points-details">
-            <h3>Total Points</h3>
-            <p>1,250 Points</p>
-          </div>
-        </div>
+        <i class="fa-solid fa-leaf"></i>
       </div>
-      
-      <div class="earn-rewards-container">
-      <h2 class="title">How to earn rewards ?</h2>
-      <div class="rewards-cards">
-          <div class="rewards-card">
-              <div class="card-icon">
-                  <ion-icon name="cafe-outline"></ion-icon>
-              </div>
-              <h3>Visit Businesses</h3>
-              <p>Earn rewards by visiting our partner locations</p>
-          </div>
-          <div class="rewards-card">
-              <div class="card-icon">
-                  <ion-icon name="share-social-outline"></ion-icon>
-              </div>
-              <h3>Share & Refer</h3>
-              <p>Get rewards when friends join using your code</p>
-          </div>
+      <div class="points-details">
+        <h3>Total Points</h3>
+        <p>1,250 Points</p>
       </div>
     </div>
+  </div>
 
-    <nav class="navigation">
-      <ul>
-        <li>
-          <span class="icon">
-            <ion-icon name="home-outline"></ion-icon>
-          </span>
-          <span class="title">
-            <a href="#">Home</a>
-          </span>
-        </li>
-        <li>
-          <span class="icon">
-            <ion-icon name="business-outline"></ion-icon>
-          </span>
-          <span class="title">
-            <a href="businesses-list/index.html">Businesses</a>
-          </span>
-        </li>
-        <li>
-          <span class="icon">
-            <ion-icon name="person-outline"></ion-icon>
-          </span>
-          <span class="title">
-            <a href="profile/index.html">Profile</a>
-          </span>
-        </li>
-        <li>
-          <span class="icon">
-            <ion-icon name="qr-code-outline"></ion-icon>
-          </span>
-          <span class="title">
-            <a href="QR_code/index.html">scan QR</a>
-          </span>
-        </li>
-      </ul>
-    </nav>
+  <div class="earn-rewards-container">
+    <h2 class="title">How to earn rewards ?</h2>
+    <div class="rewards-cards">
+      <div class="rewards-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-mug-saucer"></i>
+        </div>
+        <h3>Visit Businesses</h3>
+        <p>Earn rewards by visiting our partner locations</p>
+      </div>
+      <div class="rewards-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+        <h3>Share & Refer</h3>
+        <p>Get rewards when friends join using your code</p>
+      </div>
+    </div>
+  </div>
 
-    <script src="../assets/js/rewards.js"></script>
-      <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+  <!-- Navigation -->
+  <nav class="navigation">
+    <ul>
+      <li>
+        <a href="../">
+          <span class="icon">
+            <i class="fa-solid fa-house"></i>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="../businesses-list/">
+          <span class="icon">
+            <i class="fa-solid fa-building"></i>
+          </span>
+        </a>
+      </li>
+      <li class="active-link">
+        <a href="../profile/">
+          <span class="icon">
+            <i class="fa-solid fa-user"></i>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="../qr/">
+          <span class="icon">
+            <i class="fa-solid fa-qrcode"></i>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <script src="../assets/js/rewards.js"></script>
 </body>
+
 </html>

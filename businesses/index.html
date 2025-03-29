@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koshri Abo Tarek - Restaurant Details</title>
     <link rel="stylesheet" href="../assets/css/businesses.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <div class="container">
         <div class="header">
             <div class="back-arrow" id="back-btn">
-               <a href="../businesses-list/index.html">
-                <ion-icon name="arrow-back-outline"></ion-icon>
-               </a>
+                <a href="../businesses-list/index.html">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
             </div>
             <div class="heart-icon" id="heart-btn"></div>
         </div>
-        
+
         <!-- Logo Section -->
         <div class="logo-container">
             <div class="restaurant-logo">
@@ -25,14 +28,14 @@
             </div>
             <h1 class="logo-title">Koshri Abo Tarek</h1>
         </div>
-        
+
         <!-- Tag and Business Info -->
         <div class="tag-container">
             <div class="tag">Koshri</div>
             <div class="tag">Egyptian Cuisine</div>
             <div class="tag">Popular</div>
         </div>
-        
+
         <div class="business-info">
             <div class="business-name">Koshri Abo Tarek Restaurant</div>
             <div class="rating">
@@ -43,9 +46,9 @@
                 <span class="star-empty">★</span>
             </div>
         </div>
-        
-        <div class="open-status"></div>
-        
+
+        <div class="open-status">Open</div>
+
         <!-- Image Slider -->
         <div class="image-slider">
             <div class="slider-wrapper" id="slider-wrapper">
@@ -70,30 +73,31 @@
             </div>
             <div class="slider-nav">
                 <div class="nav-arrow" id="prev-slide">
-                    <ion-icon name="chevron-back-outline"></ion-icon>
+                    <i class="fa-solid fa-chevron-left"></i>
                 </div>
                 <div class="nav-arrow" id="next-slide">
-                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                    <i class="fa-solid fa-chevron-right"></i>
                 </div>
             </div>
         </div>
-        
+
         <!-- Location -->
         <div class="location">
-            <div class="address"></div>
+            <div class="address">El Matarawy (Matareya City)</div>
             <div class="map-icon" id="map-btn">
-                <ion-icon name="navigate-outline"></ion-icon>
+                <i class="fa-solid fa-location-dot"></i>
             </div>
+
         </div>
-        
+
         <!-- Reviews Section -->
         <div class="review-card">
             <div class="rating-stars">
-              <span class="star active"><ion-icon name="star"></ion-icon></span>
-              <span class="star active"><ion-icon name="star"></ion-icon></span>
-              <span class="star active"><ion-icon name="star"></ion-icon></span>
-              <span class="star"><ion-icon name="star-outline"></ion-icon></span>
-              <span class="star"><ion-icon name="star-outline"></ion-icon></span>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
             </div>
             <div class="review-title">Authentic Egyptian Koshri</div>
             <div class="review-text">Best koshri I've ever had! The flavors are authentic and the portion sizes are generous. The service was quick and the staff were very friendly. Would definitely recommend to anyone looking for real Egyptian cuisine!</div>
@@ -107,15 +111,15 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Add another review card -->
         <div class="review-card">
             <div class="rating-stars">
-                <span class="star active"><ion-icon name="star"></ion-icon></span>
-                <span class="star active"><ion-icon name="star"></ion-icon></span>
-                <span class="star active"><ion-icon name="star"></ion-icon></span>
-                <span class="star active"><ion-icon name="star"></ion-icon></span>
-                <span class="star"><ion-icon name="star-outline"></ion-icon></span>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
             </div>
             <div class="review-title">Great Value for Money</div>
             <div class="review-text">The koshri here is delicious and very affordable. I love that they're open 24/7 - perfect for late night cravings! The location is convenient and easy to find.</div>
@@ -129,11 +133,11 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Special Offers Section -->
         <div class="review-card">
             <div class="review-title">
-                <ion-icon name="gift-outline"></ion-icon>
+                <i class="fa-solid fa-gift"></i>
                 Special Offers
             </div>
             <div class="review-text">
@@ -144,23 +148,25 @@
                 </ul>
             </div>
         </div>
-        
+
         <!-- Bottom Navigation -->
         <div class="bottom-nav">
             <div class="call-btn" id="call-btn">
-                <div class="phone-icon"></div>
+                <div class="phone-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
             </div>
             <div class="scan-btn" id="scan-btn">SCAN QR CODE</div>
         </div>
     </div>
-    
+
     <!-- Toast Message -->
     <div class="toast-message" id="toast-message"></div>
     <div class="loading-overlay">
         <div class="loading-spinner"></div>
         <div class="loading-text">Loading nearby businesses...</div>
+    </div>
     <script src="../assets/js/businesses.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

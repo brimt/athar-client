@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athar - Coupons</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/vouchers.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="header-container">
+    <h1 class="page-title">My Coupons</h1>
+  </div>
+
+  <div class="vouchers-container">
+    <div class="voucher-filters">
+      <button class="filter-btn active">All</button>
+      <button class="filter-btn">Active</button>
+      <button class="filter-btn">Expired</button>
+    </div>
+
+    <div class="vouchers-list">
+      <div class="voucher-card">
+        <div class="voucher-header">
+          <div class="voucher-brand">
+            <img src="http://picsum.photos/50/50" alt="Coffee Haven">
+            <h3>Coffee Haven</h3>
+          </div>
+          <div class="voucher-status active">Active</div>
+        </div>
+        <div class="voucher-details">
+          <div class="voucher-code">
+            <span>COFFEE20</span>
+            <button>Copy</button>
+          </div>
+          <p>20% off on all beverages</p>
+          <div class="voucher-validity">
+            <span>Valid until: 30 June 2024</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="voucher-card">
+        <div class="voucher-header">
+          <div class="voucher-brand">
+            <img src="http://picsum.photos/50/50" alt="Green Market">
+            <h3>Green Market</h3>
+          </div>
+          <div class="voucher-status expired">Expired</div>
+        </div>
+        <div class="voucher-details">
+          <div class="voucher-code">
+            <span>GREEN10</span>
+            <button>Copy</button>
+          </div>
+          <p>10% off on organic produce</p>
+          <div class="voucher-validity">
+            <span>Expired on: 15 March 2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navigation">
+    <ul>
+      <li>
+        <a href="../">
+          <span class="icon">
+            <i class="fa-solid fa-house"></i>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="../businesses-list/">
+          <span class="icon">
+            <i class="fa-solid fa-building"></i>
+          </span>
+        </a>
+      </li>
+      <li class="active-link">
+        <a href="../profile/">
+          <span class="icon">
+            <i class="fa-solid fa-user"></i>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="../qr/">
+          <span class="icon">
+            <i class="fa-solid fa-qrcode"></i>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <script src="../assets/js/vouchers.js"></script>
+</body>
+
+</html>

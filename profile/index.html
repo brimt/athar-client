@@ -1,134 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile | Athar</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/profile.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile | Athar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/profile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <div class="profile-container">
-        <!-- Profile Header -->
-        <div class="header">
-            <div class="avatar">
-                <div class="avatar-icon">
-                  <ion-icon name="person-outline"></ion-icon>
-                </div>
-            </div>
-            <h2 class="username">hmtariq el tarsh</h2>
-            <p class="email">example@gmail.com</p>
-            <button class="edit-profile">edit profile</button>
+  <div class="profile-container">
+    <!-- Profile Header -->
+    <div class="header">
+      <div class="avatar">
+        <div class="avatar-icon">
+          <i class="fa-solid fa-user"></i>
         </div>
-        
-        <!-- Stats Cards -->
-        <div class="stats-section">
-            <div class="stats-cards">
-                <div class="stats-card">
-                    <div class="stats-value">0</div>
-                    <div class="stats-label">points</div>
-                </div>
-                <div class="stats-card">
-                    <div class="stats-value">3</div>
-                    <div class="stats-label">visits</div>
-                </div>
-                <div class="stats-card">
-                    <div class="stats-value">2</div>
-                    <div class="stats-label">referrals</div>
-                </div>
-            </div>
-        </div>
-        <div class="referral-container">
-          <h2 class="title">Refer & Earn</h2>
-          <div class="referral-card">
-            <div class="referral-code">
-              <span>ATHAR2024</span>
-              <button>Copy</button>
-            </div>
-            <p>Share this code with friends and earn 100 points for each signup!</p>
-          </div>
-        </div>
-
-        
-        <!-- Settings Section -->
-        <div class="settings-section">
-            <div class="settings-header">
-                <span class="settings-icon">
-                  <ion-icon name="settings-outline"></ion-icon>
-                </span>
-                <span class="settings-title">settings</span>
-            </div>
-            
-            <div class="settings-item language-selector">
-                <span class="settings-item-text">language</span>
-                <span class="selected-language">english (US)</span>
-            </div>
-            
-            <div class="settings-item">
-                <span class="settings-item-text">notifications</span>
-                <span class="toggle-switch">
-                  <ion-icon name="toggle"></ion-icon>
-                </span>
-            </div>
-            
-            <div class="settings-item">
-                <span class="settings-item-text">privacy settings</span>
-                <span class="arrow-icon">
-                  <ion-icon name="chevron-forward-outline"></ion-icon>
-                </span>
-            </div>
-            
-            <div class="delete-account">
-                <span class="delete-icon">
-                  <ion-icon name="trash-outline"></ion-icon>
-                </span>
-                <span class="delete-text">delete account</span>
-            </div>
-        </div>
+      </div>
+      <h2 class="username">hmtariq el tarsh</h2>
+      <p class="email">example@gmail.com</p>
+      <button class="edit-profile">edit profile</button>
     </div>
-    
-    <!-- Navigation -->
-    <nav class="navigation">
-      <ul>
-        <li>
-          <span class="icon">
-            <ion-icon name="home-outline"></ion-icon>
-          </span>
-          <span class="title">
-            <a href="../index.html">Home</a>
-          </span>
-        </li>
-        <li>
-          <span class="icon">
-            <ion-icon name="business-outline"></ion-icon>
-          </span>
-          <span class="title">
-            <a href="businesses-list/index.html">Businesses</a>
-          </span>
-        </li>
-        <li class="active-link">
-          <span class="icon">
-            <ion-icon name="person-outline"></ion-icon>
-          </span>
-          <span class="title">
-            <a href="profile/index.html">Profile</a>
-          </span>
-        </li>
-        <li>
-          <span class="icon">
-            <ion-icon name="qr-code-outline"></ion-icon>
-          </span>
-          <span class="title">
-            <a href="QR_code/index.html">scan QR</a>
-          </span>
-        </li>
-      </ul>
-    </nav>
 
-    <script src="../assets/js/profile.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Stats Cards -->
+    <div class="stats-section">
+      <div class="stats-cards">
+        <div class="stats-card">
+          <div class="stats-value">0</div>
+          <div class="stats-label">points</div>
+        </div>
+        <!-- <div class="stats-card">
+          <div class="stats-value">3</div>
+          <div class="stats-label">visits</div>
+        </div> -->
+        <div class="stats-card">
+          <div class="stats-value">2</div>
+          <div class="stats-label">referrals</div>
+        </div>
+      </div>
+    </div>
+    <div class="referral-container">
+      <h2 class="title">Refer & Earn</h2>
+      <div class="referral-card">
+        <div class="referral-code">
+          <span>7mtarek-el-tarsh-cuwie</span>
+          <button>Copy</button>
+        </div>
+        <p>Share this code with friends and earn 100 points for each signup!</p>
+      </div>
+    </div>
+
+
+    <!-- Settings Section -->
+    <div class="settings-section">
+      <div class="settings-header">
+        <span class="settings-icon">
+          <i class="fa-solid fa-gear"></i>
+        </span>
+        <span class="settings-title">settings</span>
+      </div>
+
+      <div class="settings-item language-selector">
+        <span class="settings-item-text">language</span>
+        <span class="selected-language">english (US)</span>
+      </div>
+
+      <div class="settings-item">
+        <span class="settings-item-text">privacy settings</span>
+      </div>
+
+      <div class="delete-account">
+        <span class="delete-text">delete account</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navigation">
+    <ul>
+      <li>
+        <a href="../">
+          <span class="icon">
+            <i class="fa-solid fa-house"></i>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="../businesses-list/">
+          <span class="icon">
+            <i class="fa-solid fa-building"></i>
+          </span>
+        </a>
+      </li>
+      <li class="active-link">
+        <span class="icon">
+          <i class="fa-solid fa-user"></i>
+        </span>
+      </li>
+      <li>
+        <a href="../qr/">
+          <span class="icon">
+            <i class="fa-solid fa-qrcode"></i>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <script src="../assets/js/profile.js"></script>
 </body>
+
 </html>
