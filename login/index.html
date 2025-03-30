@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Athar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/login.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="section1-container login-header">
+        <div class="logo-container">
+            <div class="header">
+                <div class="logo">
+                    <div class="leaf">🍃</div>
+                    <div class="logo-text">Athar</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="login-container">
+            <h2>Welcome Back</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                    <div class="error-message">Please enter a valid email address</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <div class="error-message">Please enter your password</div>
+                </div>
+                
+                <div class="remember-forgot">
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                
+                <button type="submit" id="submit-btn" class="login-btn">Log In</button>
+                
+                <div class="or-divider">or</div>
+                
+
+                
+                <div class="signup-link">
+                    Don't have an account? <a href="../sign-up/index.html">Sign Up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div id="toast" class="toast">Login successful!</div>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../assets/js/login.js"></script>
+</body>
+</html>
