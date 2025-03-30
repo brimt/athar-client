@@ -158,6 +158,17 @@ body {
 }
 
 /* * Success message */
+main {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+#reader {
+  translate: 0 -50px;
+}
+
 #success {
   display: none;
   position: fixed;
