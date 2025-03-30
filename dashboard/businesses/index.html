@@ -14,7 +14,7 @@
     <div class="container">
         <div class="header">
             <div class="back-arrow" id="back-btn">
-                <a href="../businesses-list/index.html">
+                <a href="../businesses-list/">
                     <i class="fa-solid fa-chevron-left"></i>
                 </a>
             </div>
@@ -32,16 +32,8 @@
             </div>
             <h1 class="logo-title">Koshri Abo Tarek</h1>
         </div>
-
-        <!-- Tag and Business Info -->
-        <div class="tag-container">
-            <div class="tag">Koshri</div>
-            <div class="tag">Egyptian Cuisine</div>
-            <div class="tag">Popular</div>
-        </div>
-
         <div class="business-info">
-            <div class="business-name">Koshri Abo Tarek Restaurant</div>
+            <!-- <div class="business-name">Koshri Abo Tarek Restaurant</div> -->
             <div class="rating">
                 <span class="star-filled">★</span>
                 <span class="star-filled">★</span>
@@ -50,6 +42,15 @@
                 <span class="star-empty">★</span>
             </div>
         </div>
+
+        <!-- Tag and Business Info -->
+        <div class="tag-container">
+            <div class="tag">Koshri</div>
+            <div class="tag">Egyptian Cuisine</div>
+            <div class="tag">Popular</div>
+        </div>
+
+
 
         <div class="open-status">Open</div>
 
@@ -154,14 +155,52 @@
             </div>
         </div>
 
+
+        <div class="review-container">
+            <h2>Write a Review</h2>
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label>Rating: <span class="required">*</span></label>
+                    <div class="star-rating" id="starRating">
+                        <span class="star" data-value="1"><i class="fa-regular fa-star"></i></span>
+                        <span class="star" data-value="2"><i class="fa-regular fa-star"></i></span>
+                        <span class="star" data-value="3"><i class="fa-regular fa-star"></i></span>
+                        <span class="star" data-value="4"><i class="fa-regular fa-star"></i></span>
+                        <span class="star" data-value="5"><i class="fa-regular fa-star"></i></span>
+                        <input type="hidden" id="ratingValue" name="rating" value="" required>
+                    </div>
+                    <div id="ratingDisplay">Your rating: <span>Not rated yet</span></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comment">Your Comment: (optional)</label>
+                    <textarea id="comment" name="comment" rows="5"></textarea>
+                    <p><span id="charCount">0</span>/500 characters</p>
+                </div>
+
+                <button type="submit" id="submitReview">Submit Review</button>
+            </form>
+
+            <div id="submissionMessage" style="display: none;">
+                <h3>Thank you for your review!</h3>
+                <p>Your feedback has been submitted successfully.</p>
+                <button class="writeAnotherReview">Write Another Review</button>
+            </div>
+            <div id="submissionMessageFailed" style="display: none;">
+                <h3>There was an error submitting your review</h3>
+                <p>Please try again later.</p>
+                <button class="writeAnotherReview">Try Again</button>
+            </div>
+        </div>
+
         <!-- Bottom Navigation -->
         <div class="bottom-nav">
-            <div class="call-btn" id="call-btn">
+            <a href="tel:01114480155" class="call-btn" id="call-btn">
                 <div class="phone-icon">
                     <i class="fa-solid fa-phone"></i>
                 </div>
-            </div>
-            <div class="scan-btn" id="scan-btn">SCAN QR CODE</div>
+            </a>
+            <a href="../qr/" class="scan-btn" id="scan-btn">SCAN QR CODE</a>
         </div>
     </div>
 
