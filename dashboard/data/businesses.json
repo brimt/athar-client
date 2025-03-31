@@ -1,0 +1,109 @@
+[
+  {
+    "id": "1",
+    "name": "Coffee Haven",
+    "category": "Cafe",
+    "subcategory": "Tea House",
+    "rating": 3.5,
+    "reward": 10,
+    "location": { "long": 37.7749, "lat": 23.4194, "address": "Cairo, Egypt" },
+    "featured": false,
+    "opening_hours": {
+      "Monday": { "open": "09:30", "close": "20:00" },
+      "Tuesday": { "open": "09:30", "close": "20:00" },
+      "Wednesday": { "open": "09:30", "close": "20:00" },
+      "Thursday": { "open": "09:30", "close": "20:00" },
+      "Friday": { "open": "09:30", "close": "20:00" },
+      "Saturday": { "open": "09:30", "close": "20:00" },
+      "Sunday": { "open": "09:30", "close": "20:00" }
+    },
+    "contact": "01114480155",
+    "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
+    "images": ["https://images.unsplash.com/photo-1521302080334-4bebac2763fc", "https://images.unsplash.com/photo-1507133750040-4a8f57021571", "https://images.unsplash.com/photo-1511920170033-f8396924c348"],
+    "tags": ["Koshari", "Ta3meya", "Error Food too delicious"]
+  },
+  {
+    "id": "2",
+    "name": "Gourmet Delights",
+    "category": "Restaurant",
+    "subcategory": "Fine Dining",
+    "rating": 4.8,
+    "reward": 15,
+    "location": { "long": 40.7128, "lat": -74.006, "address": "Cairo, Egypt" },
+    "featured": true,
+    "opening_hours": {
+      "Monday": { "open": "09:30", "close": "20:00" },
+      "Tuesday": { "open": "09:30", "close": "20:00" },
+      "Wednesday": { "open": "09:30", "close": "20:00" },
+      "Thursday": { "open": "09:30", "close": "20:00" },
+      "Friday": { "open": "09:30", "close": "20:00" },
+      "Saturday": { "open": "09:30", "close": "20:00" },
+      "Sunday": { "open": "09:30", "close": "20:00" }
+    },
+    "contact": "01114480155",
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1",
+    "images": ["https://images.unsplash.com/photo-1565299507177-b0ac66763828", "https://images.unsplash.com/photo-1543353071-10c8ba85a904", "https://images.unsplash.com/photo-1555992336-03a23aefab20"],
+    "tags": ["Koshari", "Ta3meya", "Error Food too delicious"]
+  },
+  {
+    "id": "3",
+    "name": "Elite Bites",
+    "category": "Restaurant",
+    "subcategory": "Fine Dining",
+    "rating": 4.7,
+    "reward": 12,
+    "location": { "long": 40.7306, "lat": -73.9352, "address": "Cairo, Egypt" },
+    "featured": true,
+    "opening_hours": {
+      "Monday": { "open": "10:00", "close": "22:00" },
+      "Tuesday": { "open": "10:00", "close": "22:00" },
+      "Wednesday": { "open": "10:00", "close": "22:00" },
+      "Thursday": { "open": "10:00", "close": "22:00" },
+      "Friday": { "open": "10:00", "close": "23:00" },
+      "Saturday": { "open": "10:00", "close": "23:00" },
+      "Sunday": { "open": "10:00", "close": "21:00" }
+    },
+    "contact": "01114480222",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+    "images": ["https://images.unsplash.com/photo-1528716321680-815a8cdb8cbe", "https://images.unsplash.com/photo-1565299634946-b28f40a0ae38", "https://images.unsplash.com/photo-1578474846511-04ba529f0bee"],
+    "tags": ["Koshari", "Ta3meya", "Error Food too delicious"]
+  },
+  {
+    "id": "4",
+    "name": "The Golden Spoon",
+    "category": "Restaurant",
+    "subcategory": "Fine Dining",
+    "rating": 4.9,
+    "reward": 18,
+    "location": { "long": 40.7488, "lat": -73.9857, "address": "Cairo, Egypt" },
+    "featured": true,
+    "opening_hours": {
+      "Monday": { "open": "11:00", "close": "23:00" },
+      "Tuesday": { "open": "11:00", "close": "23:00" },
+      "Wednesday": { "open": "11:00", "close": "23:00" },
+      "Thursday": { "open": "11:00", "close": "23:00" },
+      "Friday": { "open": "11:00", "close": "00:00" },
+      "Saturday": { "open": "11:00", "close": "00:00" },
+      "Sunday": { "open": "11:00", "close": "22:00" }
+    },
+    "contact": "01114480333",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
+    "images": ["https://images.unsplash.com/photo-1556742521-9713bf272865", "https://images.unsplash.com/photo-1558036117-15d82a90b9b5", "https://images.unsplash.com/photo-1555992336-03a23aefab20"],
+    "tags": ["Koshari", "Ta3meya", "Error Food too delicious"]
+  },
+  {
+    "id": "3",
+    "name": "Sunset Bakery",
+    "category": "Bakery",
+    "subcategory": "Pastry Shop",
+    "rating": 4.7,
+    "reward": 8,
+    "location": { "long": 34.0522, "lat": -118.2437, "address": "Cairo, Egypt" },
+    "featured": false,
+    "opening_hours": { "open": true, "time": "Opens at 7AM" },
+    "contact": "01114480155",
+    "image": "https://images.unsplash.com/photo-1499638472904-ea5c6178a300",
+    "images": ["https://images.unsplash.com/photo-1608198093002-57e1363af4a7", "https://images.unsplash.com/photo-1525807220233-1960c0bd958b", "https://images.unsplash.com/photo-1611154704157-1d43e73a4143"],
+    "tags": ["Koshari", "Ta3meya", "Error Food too delicious"]
+  }
+]
