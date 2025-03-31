@@ -127,6 +127,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
       document.querySelector('.location a').href = `https://www.google.com/maps?q=${business.location.lat},${business.location.lat}`;
 
+      document.getElementsByClassName('address')[0].innerText = business.location.address;
+
+      document.getElementById('scan-btn').href = `../qr?id=${business.id}`;
+
+      document.getElementById('call-btn').href = 'tel:' + business.contact || '404';
+
       fetch('../data/reviews.json')
         .then((response) => response.json())
         .then((reviews) => {
@@ -137,7 +143,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .then(() => {
       // Slider
-
       const sliderWrapper = document.getElementById('slider-wrapper');
       const prevBtn = document.getElementById('prev-slide');
       const nextBtn = document.getElementById('next-slide');
@@ -461,12 +466,6 @@ function getOpenStatus(openingHours) {
 
   // Handle overnight cases (business closes the next day)
   if (closeTime < openTime) {
-    const nextDay = new Date(now);
-    nextDay.setDate(now.getDate() + 1);
-    const nextDayName = nextDay.toLocaleString('en-US', { weekday: 'long' });
-
-    const nextDayOpenTime = parseTime(openingHours[nextDayName]?.open || '00:00');
-
     // Business is open if:
     // 1. Current time is within the same-day open-close range
     // 2. OR Current time is past the open time but before next day's opening

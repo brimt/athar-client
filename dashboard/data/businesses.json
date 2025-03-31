@@ -6,7 +6,7 @@
     "subcategory": "Tea House",
     "rating": 3.5,
     "reward": 10,
-    "location": { "long": 37.7749, "lat": 23.4194 },
+    "location": { "long": 37.7749, "lat": 23.4194, "address": "Cairo, Egypt" },
     "featured": false,
     "opening_hours": {
       "Monday": { "open": "09:30", "close": "20:00" },
@@ -29,7 +29,7 @@
     "subcategory": "Fine Dining",
     "rating": 4.8,
     "reward": 15,
-    "location": { "long": 40.7128, "lat": -74.006 },
+    "location": { "long": 40.7128, "lat": -74.006, "address": "Cairo, Egypt" },
     "featured": true,
     "opening_hours": {
       "Monday": { "open": "09:30", "close": "20:00" },
@@ -52,7 +52,7 @@
     "subcategory": "Fine Dining",
     "rating": 4.7,
     "reward": 12,
-    "location": { "long": 40.7306, "lat": -73.9352 },
+    "location": { "long": 40.7306, "lat": -73.9352, "address": "Cairo, Egypt" },
     "featured": true,
     "opening_hours": {
       "Monday": { "open": "10:00", "close": "22:00" },
@@ -75,7 +75,7 @@
     "subcategory": "Fine Dining",
     "rating": 4.9,
     "reward": 18,
-    "location": { "long": 40.7488, "lat": -73.9857 },
+    "location": { "long": 40.7488, "lat": -73.9857, "address": "Cairo, Egypt" },
     "featured": true,
     "opening_hours": {
       "Monday": { "open": "11:00", "close": "23:00" },
@@ -98,7 +98,7 @@
     "subcategory": "Pastry Shop",
     "rating": 4.7,
     "reward": 8,
-    "location": { "long": 34.0522, "lat": -118.2437 },
+    "location": { "long": 34.0522, "lat": -118.2437, "address": "Cairo, Egypt" },
     "featured": false,
     "opening_hours": { "open": true, "time": "Opens at 7AM" },
     "contact": "01114480155",
