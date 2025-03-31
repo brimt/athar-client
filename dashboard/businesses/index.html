@@ -18,9 +18,9 @@
                     <i class="fa-solid fa-chevron-left"></i>
                 </a>
             </div>
-            <div class="popular-flag">
+            <div class="popular-flag" id="featuredFlag">
                 <i class="fa-solid fa-fire"></i>
-                <span>Popular</span>
+                <span>Featured</span>
             </div>
             <div class="heart-icon" id="heart-btn"></div>
         </div>
@@ -34,23 +34,11 @@
         </div>
         <div class="business-info">
             <!-- <div class="business-name">Koshri Abo Tarek Restaurant</div> -->
-            <div class="rating">
-                <span class="star-filled">★</span>
-                <span class="star-filled">★</span>
-                <span class="star-filled">★</span>
-                <span class="star-filled">★</span>
-                <span class="star-empty">★</span>
-            </div>
+            <div class="rating"></div>
         </div>
 
         <!-- Tag and Business Info -->
-        <div class="tag-container">
-            <div class="tag">Koshri</div>
-            <div class="tag">Egyptian Cuisine</div>
-            <div class="tag">Popular</div>
-        </div>
-
-
+        <div class="tag-container"></div>
 
         <div class="open-status">Open</div>
 
@@ -112,48 +100,51 @@
         </div>
 
         <!-- Reviews Section -->
-        <div class="review-card">
-            <div class="rating-stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-            </div>
-            <div class="review-title">Authentic Egyptian Koshri</div>
-            <div class="review-text">Best koshri I've ever had! The flavors are authentic and the portion sizes are generous. The service was quick and the staff were very friendly. Would definitely recommend to anyone looking for real Egyptian cuisine!</div>
-            <div class="reviewer">
-                <div class="reviewer-avatar">
-                    <img src="https://i.pravatar.cc/100?img=33" alt="Ahmed M.">
+        <div id="reviews">
+            <!--            <div class="review-card">
+                <div class="rating-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
                 </div>
-                <div class="reviewer-info">
-                    <div class="reviewer-name">Ahmed M.</div>
-                    <div class="reviewer-date">March 10, 2025</div>
+                <div class="review-title">Authentic Egyptian Koshri</div>
+                <div class="review-text">Best koshri I've ever had! The flavors are authentic and the portion sizes are generous. The service was quick and the staff were very friendly. Would definitely recommend to anyone looking for real Egyptian cuisine!</div>
+                <div class="reviewer">
+                    <div class="reviewer-avatar">
+                        <img src="https://i.pravatar.cc/100?img=33" alt="Ahmed M.">
+                    </div>
+                    <div class="reviewer-info">
+                        <div class="reviewer-name">Ahmed M.</div>
+                        <div class="reviewer-date">March 10, 2025</div>
+                    </div>
                 </div>
             </div>
+
+            <!~~ Add another review card ~~>
+            <div class="review-card">
+                <div class="rating-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="review-title">Great Value for Money</div>
+                <div class="review-text">The koshri here is delicious and very affordable. I love that they're open 24/7 - perfect for late night cravings! The location is convenient and easy to find.</div>
+                <div class="reviewer">
+                    <div class="reviewer-avatar">
+                        <img src="https://i.pravatar.cc/100?img=28" alt="Sara T.">
+                    </div>
+                    <div class="reviewer-info">
+                        <div class="reviewer-name">Sara T.</div>
+                        <div class="reviewer-date">March 5, 2025</div>
+                    </div>
+                </div>
+            </div>-->
         </div>
 
-        <!-- Add another review card -->
-        <div class="review-card">
-            <div class="rating-stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-            </div>
-            <div class="review-title">Great Value for Money</div>
-            <div class="review-text">The koshri here is delicious and very affordable. I love that they're open 24/7 - perfect for late night cravings! The location is convenient and easy to find.</div>
-            <div class="reviewer">
-                <div class="reviewer-avatar">
-                    <img src="https://i.pravatar.cc/100?img=28" alt="Sara T.">
-                </div>
-                <div class="reviewer-info">
-                    <div class="reviewer-name">Sara T.</div>
-                    <div class="reviewer-date">March 5, 2025</div>
-                </div>
-            </div>
-        </div>
 
 
         <div class="review-container">
@@ -208,7 +199,10 @@
     <div class="toast-message" id="toast-message"></div>
     <div class="loading-overlay">
         <div class="loading-spinner"></div>
-        <div class="loading-text">Loading nearby businesses...</div>
+        <div class="loading-text">Loading business...</div>
+    </div>
+    <div id="not-found">
+
     </div>
     <script src="../assets/js/businesses.js"></script>
 </body>

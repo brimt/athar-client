@@ -59,90 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 200);
   });
 
-  const sliderWrapper = document.getElementById('slider-wrapper');
-  const prevBtn = document.getElementById('prev-slide');
-  const nextBtn = document.getElementById('next-slide');
-  const slides = document.querySelectorAll('.slide');
-  let currentSlide = 0;
-  const totalSlides = slides.length;
-
-  const slideIndicatorsContainer = document.createElement('div');
-  slideIndicatorsContainer.className = 'slide-indicators';
-
-  for (let i = 0; i < totalSlides; i++) {
-    const indicator = document.createElement('div');
-    indicator.className = i === 0 ? 'slide-indicator active' : 'slide-indicator';
-    indicator.dataset.slide = i;
-
-    indicator.addEventListener('click', () => {
-      goToSlide(i);
-    });
-
-    slideIndicatorsContainer.appendChild(indicator);
-  }
-
-  document.querySelector('.image-slider').appendChild(slideIndicatorsContainer);
-
-  function updateSlider() {
-    const offset = -currentSlide * 100;
-    sliderWrapper.style.transform = `translateX(${offset}%)`;
-
-    document.querySelectorAll('.slide-indicator').forEach((indicator, index) => {
-      if (index === currentSlide) {
-        indicator.classList.add('active');
-      } else {
-        indicator.classList.remove('active');
-      }
-    });
-  }
-
-  function goToSlide(index) {
-    currentSlide = index;
-    updateSlider();
-  }
-
-  function goToPrevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    updateSlider();
-  }
-
-  function goToNextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    updateSlider();
-  }
-
-  let slideInterval = setInterval(goToNextSlide, 5000);
-
-  const imageSlider = document.querySelector('.image-slider');
-  imageSlider.addEventListener('mouseenter', () => {
-    clearInterval(slideInterval);
-  });
-
-  imageSlider.addEventListener('mouseleave', () => {
-    clearInterval(slideInterval);
-    slideInterval = setInterval(goToNextSlide, 5000);
-  });
-
-  prevBtn.addEventListener('click', function (e) {
-    e.stopPropagation();
-    goToPrevSlide();
-    animateButton(prevBtn);
-  });
-
-  nextBtn.addEventListener('click', function (e) {
-    e.stopPropagation();
-    goToNextSlide();
-    animateButton(nextBtn);
-  });
-
-  function animateButton(button) {
-    button.style.transform = 'scale(0.9)';
-    setTimeout(() => {
-      button.style.transform = 'scale(1)';
-    }, 200);
-  }
-
-
   const callBtn = document.getElementById('call-btn');
   callBtn.addEventListener('click', function () {
     showToast('Calling restaurant...');
@@ -172,42 +88,183 @@ document.addEventListener('DOMContentLoaded', function () {
   let startTranslate = 0;
   let currentTranslate = 0;
 
-  sliderWrapper.addEventListener('touchstart', function (e) {
-    touchStartX = e.changedTouches[0].screenX;
-    startTranslate = -currentSlide * 100;
-    isDragging = true;
-    clearInterval(slideInterval);
-  });
+  // setTimeout(() => {
+  //   document.body.classList.add('loaded');
+  // }, 10000);
+  fetch('../data/businesses.json')
+    .then((response) => {
+      if (response.status === 404) {
+        throw new Error('Business not found');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      business = data[0];
+      business.featured ? (document.getElementById('featuredFlag').style.display = 'block') : (document.getElementById('featuredFlag').style.display = 'none');
+      document.getElementsByClassName('logo-image')[0].innerText = business.name
+        .split(' ')
+        .map((word) => word[0])
+        .join('');
+      document.getElementsByClassName('logo-title')[0].innerText = business.name;
+      // Update the stars display using Font Awesome icons
+      document.getElementsByClassName('rating')[0].innerHTML = getStars(business.rating);
+      business.tags.forEach((tag) => {
+        document.getElementsByClassName('tag-container')[0].innerHTML += `<div class="tag">${tag}</div>`;
+      });
+      let openStatus;
+      if (getOpenStatus(business.opening_hours)) {
+        document.getElementsByClassName('open-status')[0].style.setProperty('--status-color', '#28a745');
+        openStatus = formatBusinessHours(business.opening_hours);
+      } else {
+        document.getElementsByClassName('open-status')[0].style.setProperty('--status-color', 'red');
+        openStatus = formatBusinessHours(business.opening_hours);
+      }
+      document.getElementsByClassName('open-status')[0].innerText = openStatus;
 
-  sliderWrapper.addEventListener('touchmove', function (e) {
-    if (!isDragging) return;
+      business.images.forEach((image) => {
+        document.getElementById('slider-wrapper').innerHTML += createSlide(image);
+      });
 
-    const currentX = e.changedTouches[0].screenX;
-    const diff = currentX - touchStartX;
-    const percentMove = (diff / window.innerWidth) * 100;
+      document.querySelector('.location a').href = `https://www.google.com/maps?q=${business.location.lat},${business.location.lat}`;
 
-    currentTranslate = startTranslate + percentMove;
+      fetch('../data/reviews.json')
+        .then((response) => response.json())
+        .then((reviews) => {
+          reviews.forEach((review) => {
+            document.querySelector('#reviews').innerHTML += createReview(review);
+          });
+        });
+    })
+    .then(() => {
+      // Slider
 
-    if (currentTranslate > 0) {
-      currentTranslate = 0;
-    } else if (currentTranslate < -((totalSlides - 1) * 100)) {
-      currentTranslate = -((totalSlides - 1) * 100);
-    }
+      const sliderWrapper = document.getElementById('slider-wrapper');
+      const prevBtn = document.getElementById('prev-slide');
+      const nextBtn = document.getElementById('next-slide');
+      const slides = document.querySelectorAll('.slide');
+      let currentSlide = 0;
+      const totalSlides = slides.length;
 
-    sliderWrapper.style.transform = `translateX(${currentTranslate}%)`;
-  });
+      const slideIndicatorsContainer = document.createElement('div');
+      slideIndicatorsContainer.className = 'slide-indicators';
 
-  sliderWrapper.addEventListener('touchend', function (e) {
-    isDragging = false;
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
+      for (let i = 0; i < totalSlides; i++) {
+        const indicator = document.createElement('div');
+        indicator.className = i === 0 ? 'slide-indicator active' : 'slide-indicator';
+        indicator.dataset.slide = i;
 
-    slideInterval = setInterval(goToNextSlide, 5000);
-  });
+        indicator.addEventListener('click', () => {
+          goToSlide(i);
+        });
 
-  setTimeout(() => {
-    document.body.classList.add('loaded');
-  }, 10);
+        slideIndicatorsContainer.appendChild(indicator);
+      }
+
+      document.querySelector('.image-slider').appendChild(slideIndicatorsContainer);
+
+      function updateSlider() {
+        const offset = -currentSlide * 100;
+        sliderWrapper.style.transform = `translateX(${offset}%)`;
+
+        document.querySelectorAll('.slide-indicator').forEach((indicator, index) => {
+          if (index === currentSlide) {
+            indicator.classList.add('active');
+          } else {
+            indicator.classList.remove('active');
+          }
+        });
+      }
+
+      function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+      }
+
+      function goToPrevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      }
+
+      function goToNextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+      }
+
+      let slideInterval = setInterval(goToNextSlide, 5000);
+
+      const imageSlider = document.querySelector('.image-slider');
+      imageSlider.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+      });
+
+      imageSlider.addEventListener('mouseleave', () => {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(goToNextSlide, 5000);
+      });
+
+      prevBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        goToPrevSlide();
+        animateButton(prevBtn);
+      });
+
+      nextBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        goToNextSlide();
+        animateButton(nextBtn);
+      });
+
+      function animateButton(button) {
+        button.style.transform = 'scale(0.9)';
+        setTimeout(() => {
+          button.style.transform = 'scale(1)';
+        }, 200);
+      }
+
+      sliderWrapper.addEventListener('touchstart', function (e) {
+        touchStartX = e.changedTouches[0].screenX;
+        startTranslate = -currentSlide * 100;
+        isDragging = true;
+        clearInterval(slideInterval);
+      });
+
+      sliderWrapper.addEventListener('touchmove', function (e) {
+        if (!isDragging) return;
+
+        const currentX = e.changedTouches[0].screenX;
+        const diff = currentX - touchStartX;
+        const percentMove = (diff / window.innerWidth) * 100;
+
+        currentTranslate = startTranslate + percentMove;
+
+        if (currentTranslate > 0) {
+          currentTranslate = 0;
+        } else if (currentTranslate < -((totalSlides - 1) * 100)) {
+          currentTranslate = -((totalSlides - 1) * 100);
+        }
+
+        sliderWrapper.style.transform = `translateX(${currentTranslate}%)`;
+      });
+
+      sliderWrapper.addEventListener('touchend', function (e) {
+        isDragging = false;
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+
+        slideInterval = setInterval(goToNextSlide, 5000);
+      });
+    })
+    .then(() => {
+      document.body.classList.add('loaded');
+    })
+    .catch((error) => {
+      document.body.classList.add('loaded');
+      Array.from(document.body.children).forEach((node) => {
+        node.style.display = 'none';
+      });
+      document.getElementById('not-found').style.display = 'flex';
+      document.getElementById('not-found').innerText = error.message;
+    });
 
   heartBtn.innerHTML = '<i class="fa-regular fa-heart"></i>';
   // document.querySelector('.phone-icon').innerHTML = '<ion-icon name="call"></ion-icon>';
@@ -232,7 +289,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let isHalfStar = false;
 
   // Star rating functionality
-  stars.forEach(star => {
+  stars.forEach((star) => {
     star.addEventListener('click', function () {
       const starValue = parseInt(this.getAttribute('data-value'));
 
@@ -243,7 +300,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Calculate the new rating:
         // Previous full stars + half of current star
-        currentRating = (starValue - 1) + 0.5;
+        currentRating = starValue - 1 + 0.5;
       } else {
         // First click on any star - set to full value
         isHalfStar = false;
@@ -318,7 +375,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Collect review data
     const reviewData = {
       rating: parseFloat(ratingValueInput.value),
-      comment: commentTextarea.value.trim() || null
+      comment: commentTextarea.value.trim() || null,
     };
 
     // Here you would typically send the data to your server
@@ -328,32 +385,30 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch('https://httpbin.org/post', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(reviewData)
+      body: JSON.stringify(reviewData),
     })
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         console.log('Review submitted successfully:', data);
         // Disable submit button
         // Show success message and hide form
         reviewForm.style.display = 'none';
         submissionMessage.style.display = 'block';
         submitReviewBtn.disabled = false;
-
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Error submitting review:', error);
         // Show failure message and hide form
         reviewForm.style.display = 'none';
         submissionMessageFailed.style.display = 'block';
         submitReviewBtn.disabled = false;
-
       });
   });
 
   // Allow user to write another review
-  Array.from(writeAnotherReviewBtn).forEach(btn => {
+  Array.from(writeAnotherReviewBtn).forEach((btn) => {
     btn.addEventListener('click', function () {
       reviewForm.reset();
       charCount.textContent = '0';
@@ -370,3 +425,124 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+function getStars(rating) {
+  let stars = '';
+  const fullStars = Math.floor(rating); // Number of full stars
+  const hasHalfStar = rating % 1 >= 0.5; // Check if there is a half star
+  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0); // Remaining empty stars
+
+  // Add full stars
+  for (let i = 0; i < fullStars; i++) {
+    stars += '<i class="fas fa-star"></i> ';
+  }
+
+  // Add half star if needed
+  if (hasHalfStar) {
+    stars += '<i class="fas fa-star-half-alt"></i> ';
+  }
+
+  // Add empty stars
+  for (let i = 0; i < emptyStars; i++) {
+    stars += '<i class="far fa-star"></i> ';
+  }
+
+  return stars.trim();
+}
+function getOpenStatus(openingHours) {
+  const now = new Date();
+  const currentDay = now.toLocaleString('en-US', { weekday: 'long' });
+  const currentTime = now.getHours() * 60 + now.getMinutes(); // Convert current time to minutes
+
+  if (!openingHours[currentDay]) return false; // If the day is missing in the object
+
+  const openTime = parseTime(openingHours[currentDay].open);
+  const closeTime = parseTime(openingHours[currentDay].close);
+
+  // Handle overnight cases (business closes the next day)
+  if (closeTime < openTime) {
+    const nextDay = new Date(now);
+    nextDay.setDate(now.getDate() + 1);
+    const nextDayName = nextDay.toLocaleString('en-US', { weekday: 'long' });
+
+    const nextDayOpenTime = parseTime(openingHours[nextDayName]?.open || '00:00');
+
+    // Business is open if:
+    // 1. Current time is within the same-day open-close range
+    // 2. OR Current time is past the open time but before next day's opening
+    return currentTime >= openTime || currentTime < closeTime;
+  }
+
+  return currentTime >= openTime && currentTime < closeTime;
+}
+// Helper function to convert "HH:MM" to minutes
+function parseTime(timeStr) {
+  const [hours, minutes] = timeStr.split(':').map(Number);
+  return hours * 60 + minutes;
+}
+
+function createSlide(image) {
+  return `
+<div class="slide">
+  <img src="${image}" />
+</div>`;
+}
+
+function createReview(review) {
+  return `
+<div class="review-card">
+  <div class="rating-stars">${getStars(review.rating)}</div>
+
+  <div class="review-title">${review.title}</div>
+
+  <div class="review-text">${review.comment}</div>
+
+  <div class="reviewer">
+    <div class="reviewer-info">
+      <div class="reviewer-name">${review.username}</div>
+      <div class="reviewer-date">${review.date}</div>
+    </div>
+  </div>
+</div>`;
+}
+
+function formatBusinessHours(hours) {
+  const days = Object.keys(hours);
+  const uniqueHours = new Map();
+
+  function convertTo12Hour(time) {
+    let [hour, minute] = time.split(':').map(Number);
+    let period = hour >= 12 ? 'PM' : 'AM';
+    hour = hour % 12 || 12; // Convert 0 to 12 for 12 AM
+    return `${hour}:${minute.toString().padStart(2, '0')} ${period}`;
+  }
+
+  function isOvernight(openTime, closeTime) {
+    return closeTime < openTime; // If close time is smaller, it's past midnight
+  }
+
+  // Group days by identical hours, considering overnight cases
+  days.forEach((day) => {
+    let openTime24 = parseInt(hours[day].open.replace(':', ''), 10);
+    let closeTime24 = parseInt(hours[day].close.replace(':', ''), 10);
+
+    const openTime = convertTo12Hour(hours[day].open);
+    const closeTime = convertTo12Hour(hours[day].close);
+
+    let timeRange = isOvernight(openTime24, closeTime24) ? `${openTime} - ${closeTime}` : `${openTime} - ${closeTime}`;
+
+    if (!uniqueHours.has(timeRange)) {
+      uniqueHours.set(timeRange, []);
+    }
+    uniqueHours.get(timeRange).push(day);
+  });
+
+  // Convert grouped data to a readable format
+  const formattedHours = [];
+  uniqueHours.forEach((days, time) => {
+    const range = days.length > 1 ? `${days[0]}-${days[days.length - 1]}` : days[0];
+    formattedHours.push(`${range}: ${time}`);
+  });
+
+  return formattedHours.length === 1 ? `Open daily: ${formattedHours[0].split(': ')[1]}` : formattedHours.join(', ');
+}

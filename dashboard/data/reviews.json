@@ -1,0 +1,16 @@
+[
+  {
+    "comment": "Absolutely loved the experience! The food was fresh and delicious, and the ambiance was perfect for a fine dining experience. The staff was attentive and made great recommendations. I’ll definitely be coming back!",
+    "date": "2025-03-28T18:30:00Z",
+    "rating": 5,
+    "title": "Fantastic Experience!",
+    "username": "Ahmed Khaled"
+  },
+  {
+    "comment": "The place looked nice, but the service was really slow. We waited over 40 minutes for our food, and when it arrived, it was cold. The staff didn’t seem to care much about our complaints. Wouldn’t recommend if you're in a hurry.",
+    "date": "2025-03-26T14:15:00Z",
+    "rating": 2,
+    "title": "Slow Service, Cold Food",
+    "username": "Sarah Mostafa"
+  }
+]
