@@ -73,14 +73,14 @@
     list-style: none;
   }
   
-  .nav-links a {
-    color: var(--text-light);
+  .nav-links li a {
+    color: var(--accent-color);
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s ease;
   }
   
-  .nav-links a:hover {
+  .nav-links li a:hover {
     color: var(--accent-color);
   }
   
@@ -88,12 +88,13 @@
     display: none;
     font-size: 24px;
     cursor: pointer;
-    color: var(--text-light);
+    color: var(--accent-color);
   }
   
   .auth-buttons {
     display: flex;
     justify-content: flex-end;
+    color: var(--primary-color); 
   }
   
   /* Hero Section */
@@ -673,6 +674,7 @@
     
     .auth-buttons {
       margin-left: auto;
+      display: table;
     }
     
     .hero {
@@ -711,7 +713,7 @@
     :root {
       --container-padding: 4%;
     }
-    
+
     .header-title {
       font-size: 24px;
     }
