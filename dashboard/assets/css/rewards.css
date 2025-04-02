@@ -43,14 +43,21 @@ body {
   margin-bottom: var(--spacing-md);
 }
 
-.back-button {
-  color: var(--primary-color);
-  margin-right: var(--spacing-md);
+.back-arrow {
+  font-size: 20px;
+  transition: all 0.3s ease;
+  margin-left: 5px;
 }
 
-.back-button i {
-  font-size: 24px;
+.back-arrow a {
+  color: var(--text-dark);
 }
+
+.back-arrow:hover {
+  background-color: var(--primary-color);
+  transform: translateX(-2px);
+}
+
 
 .earn-rewards-container {
   margin: 30px var(--spacing-md) 90px;
@@ -65,6 +72,13 @@ body {
 
 .rewards-cards::-webkit-scrollbar {
   display: none;
+}
+
+a{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .rewards-card {
@@ -255,5 +269,67 @@ body {
 
   .business-slide {
     width: 85%;
+  }
+}
+
+.redeem-rewards-container {
+  margin: var(--spacing-md);
+}
+
+.redeem-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.redeem-card {
+  background-color: #ffffff;
+  border-radius: var(--radius);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.redeem-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.redeem-card .card-icon {
+  background-color: rgba(232, 213, 176, 0.3);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.redeem-card .card-icon i {
+  font-size: 32px;
+  color: var(--primary-color);
+}
+
+.redeem-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.redeem-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .redeem-cards {
+    grid-template-columns: 1fr;
   }
 }

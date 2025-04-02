@@ -33,6 +33,16 @@ body {
   box-shadow: var(--shadow);
 }
 
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -75,47 +85,6 @@ body {
   margin: 0 auto;
   margin-bottom: var(--spacing-md);
   padding: 0 var(--spacing-md);
-}
-
-.signup-container {
-  background-color: #ffffff;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: var(--spacing-lg);
-  margin-top: var(--spacing-lg);
-  margin-bottom: 100px;
-}
-
-.signup-container h2 {
-  text-align: center;
-  color: var(--primary-color);
-  margin-bottom: var(--spacing-md);
-  font-weight: 600;
-}
-
-.business-type-banner {
-  background-color: rgba(93, 64, 55, 0.05);
-  border: 2px solid var(--primary-color);
-  border-radius: var(--radius);
-  padding: var(--spacing-md);
-  margin-bottom: var(--spacing-lg);
-  text-align: center;
-}
-
-.business-type-banner .emoji {
-  font-size: 32px;
-  margin-bottom: var(--spacing-sm);
-}
-
-.business-type-banner h3 {
-  font-size: 18px;
-  color: var(--primary-color);
-  margin-bottom: 4px;
-}
-
-.business-type-banner p {
-  font-size: 14px;
-  color: #666;
 }
 
 .form-section {

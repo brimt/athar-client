@@ -483,7 +483,9 @@ function parseTime(timeStr) {
 function createSlide(image) {
   return `
 <div class="slide">
-  <img src="${image}" />
+    <div class="image-placeholder">
+      <img  src="${image}" />
+    </div>
 </div>`;
 }
 

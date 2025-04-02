@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const deleteAccountBtn = document.querySelector('.delete-account');
   const menuItems = document.querySelectorAll('.menu-item');
   const username = document.querySelector('.username');
-  const email = document.querySelector('.email');
 
   // Edit Profile Button
   editProfileBtn.addEventListener('click', function () {
@@ -22,10 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="form-group">
                 <label for="username">Name</label>
                 <input type="text" id="username" value="${username.textContent}" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" value="${email.textContent}" required>
             </div>
             <div class="form-group">
                 <label for="profile-pic">Profile Picture</label>
@@ -43,14 +38,11 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       const newUsername = document.getElementById('username').value;
-      const newEmail = document.getElementById('email').value;
 
       // Update profile information
       username.textContent = newUsername;
-      email.textContent = newEmail;
-
       // Save to localStorage
-      saveUserData({ name: newUsername, email: newEmail });
+      saveUserData({ name: newUsername});
 
       // Close modal with animation
       closeModal(modal);
@@ -246,7 +238,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const userData = JSON.parse(localStorage.getItem('userData'));
     if (userData) {
       if (userData.name) username.textContent = userData.name;
-      if (userData.email) email.textContent = userData.email;
     }
   }
 

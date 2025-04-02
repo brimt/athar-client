@@ -225,7 +225,6 @@ body {
 .slider-wrapper {
   display: flex;
   transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-  /* width: 300%; */
   height: 100%;
 }
 
@@ -234,7 +233,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 100%;
+  min-width: 35%;
   height: 100%;
 }
 
@@ -294,7 +293,9 @@ body {
   background-color: var(--light);
   transform: scale(1.1);
 }
-
+img{
+  width: 100%;
+}
 .image-placeholder {
   text-align: center;
   width: 100%;
@@ -304,6 +305,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #e9ecef;
+  background-size: cover;
 }
 
 .image-placeholder p {
@@ -404,15 +406,6 @@ body {
   display: flex;
   transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   width: 300%;
-  height: 100%;
-}
-
-.slide {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 100%;
   height: 100%;
 }
 

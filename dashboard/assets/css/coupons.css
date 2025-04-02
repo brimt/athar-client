@@ -27,6 +27,7 @@ body {
   color: var(--primary-color);
 }
 
+
 .header-container {
   display: flex;
   align-items: center;
@@ -34,6 +35,21 @@ body {
   background: linear-gradient(135deg, var(--accent-color), #d4b78c);
   border-radius: 0 0 var(--radius) var(--radius);
   box-shadow: var(--shadow);
+}
+
+.back-arrow {
+  font-size: 20px;
+  transition: all 0.3s ease;
+  margin-left: 5px;
+}
+
+.back-arrow a {
+  color: var(--text-dark);
+}
+
+.back-arrow:hover {
+  background-color: var(--primary-color);
+  transform: translateX(-2px);
 }
 
 .vouchers-container {
