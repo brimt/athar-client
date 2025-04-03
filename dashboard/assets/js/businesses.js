@@ -262,14 +262,6 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(() => {
       document.body.classList.add('loaded');
     })
-    .catch((error) => {
-      document.body.classList.add('loaded');
-      Array.from(document.body.children).forEach((node) => {
-        node.style.display = 'none';
-      });
-      document.getElementById('not-found').style.display = 'flex';
-      document.getElementById('not-found').innerText = error.message;
-    });
 
   heartBtn.innerHTML = '<i class="fa-regular fa-heart"></i>';
   // document.querySelector('.phone-icon').innerHTML = '<ion-icon name="call"></ion-icon>';
