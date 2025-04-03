@@ -472,14 +472,14 @@ function parseTime(timeStr) {
   return hours * 60 + minutes;
 }
 
-function createSlide(image) {
-  return `
-<div class="slide">
-    <div class="image-placeholder">
-      <img  src="${image}" />
-    </div>
-</div>`;
-}
+// function createSlide(image) {
+//   return `
+// <div class="slide">
+//     <div class="image-placeholder">
+//       <img  src="${image}" />
+//     </div>
+// </div>`;
+// }
 
 function createReview(review) {
   return `
