@@ -183,7 +183,6 @@ header {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-lg);
-  align-items: center;
 }
 
 .about-image {
@@ -393,8 +392,11 @@ header {
 }
 
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--spacing-lg);
   margin-bottom: var(--spacing-lg);
 }
@@ -407,6 +409,13 @@ header {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(93, 64, 55, 0.1);
   height: 100%;
+  flex-basis: calc(33.33% - var(--spacing-lg));
+  @media (max-width: 1200px) {
+    flex-basis: calc(50% - var(--spacing-lg));
+  }
+  @media (max-width: 480px) {
+    flex-basis: calc(100% - var(--spacing-lg));
+  }
 }
 
 .team-card:hover {

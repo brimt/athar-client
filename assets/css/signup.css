@@ -283,3 +283,9 @@ body {
     flex-direction: column;
   }
 }
+
+.required-form-field::after {
+  content: '*';
+  color: red;
+  margin-left: 4px;
+}

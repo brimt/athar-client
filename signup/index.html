@@ -20,7 +20,7 @@
                 <div class="logo">
                     <a href="../index.html">
                         <img src="../dashboard/assets/images/logo-en.svg" alt="Athar" style="width: 8rem; ">
-                      </a>
+                    </a>
                 </div>
             </div>
         </div>
@@ -29,52 +29,43 @@
     <div class="container">
         <div class="signup-container">
             <h2>Create Your Account</h2>
-            <form id="signupForm">
-                <!-- <div class="user-type-container">
-                    <div class="user-type-option selected" data-type="visitor" onclick="selectUserType('visitor')">
-                        <div class="emoji">👤</div>
-                        <h3>I'm a Customer</h3>
-                        <p>Discover eco-friendly local businesses</p>
-                    </div>
-                </div> -->
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" placeholder="Enter your first name" required>
-                        <div class="error-message">Please enter your first name</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" placeholder="Enter your last name" required>
-                        <div class="error-message">Please enter your last name</div>
-                    </div>
+            <form enctype="multipart/form-data" id="signupForm">
+                <div class="form-group">
+                    <label class="required-form-field" for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                    <div class="error-message">Please enter your name</div>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email Address</label>
+                    <label class="required-form-field" for="email">Email Address</label>
                     <input type="email" id="email" placeholder="Enter your email" required>
                     <div class="error-message">Please enter a valid email address</div>
                 </div>
 
                 <div class="form-group">
-                    <label for="password">Password</label>
+                    <label class="required-form-field" for="password">Password</label>
                     <input type="password" id="password" placeholder="Create a password" required>
                     <div class="error-message">Password must be at least 8 characters with at least one letter and one number</div>
                 </div>
 
                 <div class="form-group">
-                    <label for="confirm-password">Confirm Password</label>
+                    <label class="required-form-field" for="confirm-password">Confirm Password</label>
                     <input type="password" id="confirm-password" placeholder="Confirm your password" required>
                     <div class="error-message">Passwords do not match</div>
                 </div>
 
+                <div class="form-group">
+                    <label for="image">Profile Picture</label>
+                    <input type="file" id="image" accept="image/*">
+                    <!-- <div class="error-message">Please upload a profile picture</div> -->
+                </div>
+
                 <button type="submit" id="submit-btn" class="signup-btn">Create Account</button>
 
-                <div class="login-link">
-                    Already have an account? <a href="../login/">Login</a>
-                </div>
             </form>
+            <div class="login-link">
+                Already have an account? <a href="../login/">Login</a>
+            </div>
         </div>
     </div>
 
