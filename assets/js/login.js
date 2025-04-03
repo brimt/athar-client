@@ -1,3 +1,5 @@
+const SERVER_URL = 'http://localhost:8080/';
+
 document.addEventListener('DOMContentLoaded', function () {
   const loginForm = document.getElementById('loginForm');
   const emailInput = document.getElementById('email');
@@ -31,56 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 3000);
   }
 
-  function authenticateUser(email, password) {
-    const users = JSON.parse(localStorage.getItem('Athar-users')) || [];
-
-    const user = users.find((user) => user.email.toLowerCase() === email.toLowerCase());
-
-    if (user) {
-      return {
-        success: true,
-        userId: user.id,
-        userType: user.userType,
-        name: `${user.firstName} ${user.lastName}`,
-      };
-    }
-
-    return { success: false };
-  }
-
-  function handleSuccessfulLogin(userData) {
-    localStorage.setItem('currentAthar-user', userData.userId);
-
-    if (rememberCheckbox.checked) {
-      localStorage.setItem('Athar-remember-login', 'true');
-    }
-
-    showToast(`Welcome back, ${userData.name}!`);
-
-    setTimeout(() => {
-      if (userData.userType === 'business') {
-        window.location.href = '../';
-      }
-    }, 1500);
-  }
-
-  function checkSavedLogin() {
-    const rememberedLogin = localStorage.getItem('Athar-remember-login');
-    const currentUser = localStorage.getItem('currentAthar-user');
-
-    if (rememberedLogin === 'true' && currentUser) {
-      const users = JSON.parse(localStorage.getItem('Athar-users')) || [];
-      const user = users.find((user) => user.id === currentUser);
-
-      if (user) {
-        emailInput.value = user.email;
-        rememberCheckbox.checked = true;
-      }
-    }
-  }
-
-  checkSavedLogin();
-
   loginForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -103,16 +55,39 @@ document.addEventListener('DOMContentLoaded', function () {
       showError(passwordInput, 'Please enter your password');
       isValid = false;
     }
-    if (isValid) {
-      const authResult = authenticateUser(email, password);
 
-      if (authResult.success) {
-        handleSuccessfulLogin(authResult);
-      } else {
+    if (!isValid) return;
+
+    fetch(SERVER_URL + 'api/auth/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      credentials: 'include',
+      body: JSON.stringify({ email, password }),
+    })
+      .then(response => {
+        try {
+          if (response.status === 200) {
+            return response.json();
+          } else {
+            throw new Error('Invalid email or password');
+          }
+        } catch {
+          console.log('Error:', response.status);
+          throw new Error('Invalid email or password');
+        }
+      })
+      .then(data => {
+        console.log(data.accessToken);
+        localStorage.setItem("accessToken", data.accessToken); // Store the access token in localStorage
+        window.location.href = '../dashboard';
+      })
+      .catch(error => {
+        console.error('Error:', error);
         showError(emailInput, 'Invalid email or password');
         showError(passwordInput, 'Invalid email or password');
-      }
-    }
+      });
   });
 
   emailInput.addEventListener('focus', () => clearError(emailInput));
@@ -121,14 +96,15 @@ document.addEventListener('DOMContentLoaded', function () {
     alert('Google authentication would be implemented here in a production environment.');
   });
 
-  document.querySelector('.forgot-password').addEventListener('click', function (e) {
-    e.preventDefault();
+  // TODO: Forgot Password
+  // document.querySelector('.forgot-password').addEventListener('click', function (e) {
+  //   e.preventDefault();
 
-    const email = emailInput.value.trim();
-    if (email && isValidEmail(email)) {
-      showToast('Password reset instructions sent to your email');
-    } else {
-      showError(emailInput, 'Please enter a valid email to reset your password');
-    }
-  });
+  //   const email = emailInput.value.trim();
+  //   if (email && isValidEmail(email)) {
+  //     showToast('Password reset instructions sent to your email');
+  //   } else {
+  //     showError(emailInput, 'Please enter a valid email to reset your password');
+  //   }
+  // });
 });
